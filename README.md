@@ -1,13 +1,13 @@
 # F-127
 # **Takım İsmi**
 Takım Flutter 127
-# Ürün İle İlgili Bilgiler
-## Takım Elemanları
+## Takım Üyeleri
 - Emre Yüksel: Product Owner / Developer
 - Mehtap Çaldıran: Scrum Master / Developer
 - Barış İnan: Developer
 - Hacer Arıburnu: Developer
--  Ayşe Hümeyra Cengiz: Aktif Olmayan Üye
+- Ayşe Hümeyra Cengiz: Aktif Olmayan Üye
+# Ürün İle İlgili Bilgiler
 ## Ürün İsmi
 --....--
 ## Product Backlog URL
