@@ -1,4 +1,3 @@
-# F-127
 # **Takım İsmi**
 Takım Flutter 127
 ## Takım Üyeleri
