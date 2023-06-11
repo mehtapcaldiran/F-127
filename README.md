@@ -1,5 +1,4 @@
 # F-127
-@@ -1,73 +1,73 @@
 # **Takım İsmi**
 Takım Flutter 127
 # Ürün İle İlgili Bilgiler
