@@ -62,6 +62,6 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
   - Süreç içinde alınan kararların kesinleşmesi ve sağlam adımlar atılması adına her toplantıda bir önceki toplantının konusu üzerinden geçildi. Tasarım ve fikir aşaması 1. sprintin büyük bölümünü kapsadı. 2.sprint daha fazla ürün çıkarmaya yönelik çalışılması üzerine kararlar alındı.
 ---
 ## Product Backlog URL
-[Flutter Team 127 Figma Backlog Board]([https://miro.com/app/board/uXjVO4kRs2w=/](https://www.figma.com/file/GnM3NDG7SCPwflDVooV57E/Proje-Tasar%C4%B1m?type=whiteboard&t=OpPCiWqfuLQ6jOfm-0)https://www.figma.com/file/GnM3NDG7SCPwflDVooV57E/Proje-Tasar%C4%B1m?type=whiteboard&t=OpPCiWqfuLQ6jOfm-0)
+[Flutter Team 127 Figma Backlog Board](https://www.figma.com/file/GnM3NDG7SCPwflDVooV57E/Proje-Tasar%C4%B1m?type=whiteboard&t=OpPCiWqfuLQ6jOfm-0)
 
 ---
