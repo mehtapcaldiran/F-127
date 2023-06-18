@@ -10,7 +10,7 @@ Takım Flutter 127
 ## Ürün İsmi
 --Bonte--
 ## Product Backlog URL
-- ![Screenshot 1](https://github.com/GitMustafaAksoy/oua_flutter_team_52/blob/main/ProjectManagement/Sprint1Documents/product1.png)
+[Flutter Team 127 Figma Backlog Board](https://www.figma.com/file/GnM3NDG7SCPwflDVooV57E/Proje-Tasar%C4%B1m?type=whiteboard&t=OpPCiWqfuLQ6jOfm-0)
 ## Ürün Açıklaması
  Bonte, sosyal fayda sağlamayan kuruluşları ve yardımsever insanları bir araya getirerek toplumsal dayanışmayı desteklemeyi amaçlar. Kullanıcılar, topluma katkıda bulunma konusunda teşvik edilir ve kolaylıkla kuruluşların gönüllü faaliyetlerine katılabilirler. Aynı zamanda kullanıcılar, kuruluşların faaliyetlerinden haberdar olup onlara ulaşabilir, takip edebilir, bağış yapabilir ve gelişmelerini izleyebilir. Bu sayede, kuruluşlarla gönüllüler arasında sağlam bir bağ oluşur.
 
@@ -53,9 +53,11 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - **Daily Scrum**: ...
 - **Daily Scrum**: ...
 - 
-- **Sprint board update**: ...
-- 
-- **Ürün Durumu**: ...
+- **Sprint board update**:
+- ![trello](https://github.com/mehtapcaldiran/F-127/blob/main/trello.jpg) 
+- **Ürün Durumu**: 
+- ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_2.jpg)
+- ![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_1.jpg)
 - **Sprint Review**: Alınan kararlar: Uygulamının konusu ve ismi belirlendi. Genel akış şeması (uygulama içerisinde sayfaların akışı) oluşturuldu. UI tasarımı için renk ve tasarım diline karar verildi. Sprint Review katılımcıları: Emre Yüksel, Hacer Arıburnu, Barış İnan, Mehtap Çaldıran. 
 
 - **Sprint Retrospective:**
