@@ -50,8 +50,7 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - 1.sprint :15
 - 2.sprint :40
 - 3.sprint :45
-- **Daily Scrum**:
--  ![zoom toplantıları ve görüşme özetleri](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0.docx)  
+- **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0.docx)
 - **Sprint board update**:
 - ![trello](https://github.com/mehtapcaldiran/F-127/blob/main/trello.jpg) 
 - **Ürün Durumu**: 
