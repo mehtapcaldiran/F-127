@@ -10,7 +10,7 @@ Takım Flutter 127
 ## Ürün İsmi
 --Bonte--
 ## Product Backlog URL
-....
+- ![Screenshot 1](https://github.com/GitMustafaAksoy/oua_flutter_team_52/blob/main/ProjectManagement/Sprint1Documents/product1.png)
 ## Ürün Açıklaması
  Bonte, sosyal fayda sağlamayan kuruluşları ve yardımsever insanları bir araya getirerek toplumsal dayanışmayı desteklemeyi amaçlar. Kullanıcılar, topluma katkıda bulunma konusunda teşvik edilir ve kolaylıkla kuruluşların gönüllü faaliyetlerine katılabilirler. Aynı zamanda kullanıcılar, kuruluşların faaliyetlerinden haberdar olup onlara ulaşabilir, takip edebilir, bağış yapabilir ve gelişmelerini izleyebilir. Bu sayede, kuruluşlarla gönüllüler arasında sağlam bir bağ oluşur.
 
@@ -40,8 +40,9 @@ Takım Flutter 127
 - Gönüllü insanlar
 - Yardıma ihtiyacı olan inanlar
 - Kurumları ve ilerleyişi takip etmek isteyen insanlar
-## Juriye Not
+## Juriye Not 
 Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi açısından product backlog URL'ye alternatif çalışmaların da screenshotları yerleştirilmiştir.
+
 ---
 # Sprint 1
 - **Sprint içinde tamamlanması tahmin edilen puan**: 15 Puan
