@@ -8,20 +8,31 @@ Takım Flutter 127
 - Ayşe Hümeyra Cengiz: Aktif Olmayan Üye
 # Ürün İle İlgili Bilgiler
 ## Ürün İsmi
---....--
+--Bonté--
 ## Product Backlog URL
 ....
 ## Ürün Açıklaması
- Toplumsal Fayda Uygulaması, yardımsever insanları ve sosyal yardımlaşma kuruluşlarını bir araya getirmeyi amaçlayan bir platformdur. Bu platform, kullanıcıları topluma katkıda bulunmaya teşvik ederek kuruluşların gönüllü faaliyetlerine kolaylıkla katılmalarını sağlar. Amacı, toplumsal dayanışmaya olumlu bir etki yaparak daha iyi bir dünya için birlikte çalışmaktır.
- Bu uygulama; kullanıcıları, kuruluşların faaliyetlerinden haberdar ederek gönüllü insanların bu kuruluşlara ulaşmasını kolaylaştırır. Ayrıca, kullanıcılara kuruluşları kolaylıkla takip etmek, bağış yapmak ve gelişmelerini takip etmek gibi fırsatlar sunar. Bu sayede, kuruluşlar ile gönüllüler arasında pratik, kolay erişim sağlayan ve sürdürülebilir bir bağ oluşur.
- Toplumsal Fayda Uygulaması, kullanıcılara etkileşimde bulunabilecekleri kişisel profiller sunar. Bu profiller aracılığıyla kullanıcılar, çeşitli kuruluşları keşfedebilir ve onların düzenlediği etkinliklerden hemen haberdar olup katılabilirler. Ayrıca, kuruluşların sunduğu eğitimlere kaydolma imkanı bulurlar. Eğer etkinlik çevrim içiyse, kullanıcılar anında erişebilirler. Bu şekilde, kuruluşlar kullanıcıları daha fazla bilinçlendirebilir ve toplumsal fayda konusunda eğitim sağlayabilirler.
- Uygulama, kullanıcıların sosyal fayda sağladıklarında rozetler, peçler ve sertifikalar kazanabilecekleri bir sistem sunar. Bu ödüller, kullanıcıların profillerinde sergileyebilecekleri kişisel vitrinler oluşturarak toplumsal katkılarını göstermelerini sağlar. Ayrıca, kullanıcılar kuruluşların paylaşımlarıyla etkileşime geçebilir, düşüncelerini paylaşabilir ve ilgi duydukları konularla ilgili dernekleri bulup katkıda bulunabilirler. Bu sayede, sosyal fayda sağlayan kuruluşlar etkinliklerini artırırken bireylerin de daha aktif bir rol oynamasını teşvik eder.
- Toplumsal Fayda Uygulaması, kuruluşların hedef kitlelerine kolaylıkla ulaşmalarını ve iletişimlerini güçlendirmelerini sağlar. Kuruluşlar, projelerini tanıtabilir, belirli konularda kitlelerini bilinçlendirebilir ve destekçilerine erişebilir. Ayrıca, platformda paylaşımlarda bulunarak kitlelerinin düşüncelerini yorumlar aracılığıyla görebilirler. Kullanıcıları teşvik etmek amacıyla etkinlikler ve eğitimler sonrasında sertifikalar, peçler ve rozetler gibi ödüller verebilirler. Bu sayede, etkinliklere katılan kullanıcılar bu ödülleri profillerinde sergileyerek toplumsal katkılarını gösterebilirler.
- Toplumsal Fayda Uygulaması, sosyal sorumluluk bilincini artırmayı hedefleyen kullanıcı dostu bir platformdur. Kullanıcılar, bu uygulama aracılığıyla topluma daha fazla değer katma ve sosyal faydaya katkıda bulunma fırsatı bulurlar. Kuruluşlar ise daha geniş bir kitleye ulaşarak projelerini gerçekleştirme ve toplumsal değişim yaratma konusunda destek bulurlar. Bu uygulama, sosyal fayda odaklı kuruluşlar ve bireyler arasında güçlü bir bağ oluşturarak daha kapsayıcı ve yardımsever bir toplumun oluşmasına katkı sağlar.
+ Bonté, sosyal fayda sağlamayan kuruluşları ve yardımsever insanları bir araya getirerek toplumsal dayanışmayı desteklemeyi amaçlar. Kullanıcılar, topluma katkıda bulunma konusunda teşvik edilir ve kolaylıkla kuruluşların gönüllü faaliyetlerine katılabilirler. Aynı zamanda kullanıcılar, kuruluşların faaliyetlerinden haberdar olup onlara ulaşabilir, takip edebilir, bağış yapabilir ve gelişmelerini izleyebilir. Bu sayede, kuruluşlarla gönüllüler arasında sağlam bir bağ oluşur.
+
+ Bonté, kullanıcılara kişisel profiller sunarak etkileşim imkanı sağlar. Kullanıcılar, farklı kuruluşları keşfedebilir, etkinliklerine hemen katılabilir ve eğitimlerine kaydolabilirler. Kuruluşlar, kullanıcıları daha fazla bilinçlendirebilmek için çevrimiçi etkinlikler ve eğitimler düzenleyebilirler. Kullanıcılar, bu aktiviteler sonucunda rozetler, peçler ve sertifikalar kazanarak dahil oldukları süreci somut bir şekilde gösterebilir ve kişisel profillerini özelleştirebilirler. Ayrıca, kuruluşların paylaşımlarıyla etkileşime geçebilir, düşüncelerini paylaşabilir ve ilgi duydukları konularla ilgili derneklerin çalışmalarına katkıda bulunabilirler. Bu şekilde, sosyal fayda sağlayan kuruluşlar etkinliklerini artırırken bireylerin de daha aktif bir rol oynamalarını sağlar.
+ 
+ Aynı zamanda Bonté kuruluşların hedef kitlelerine kolaylıkla ulaşmalarını ve iletişimlerini güçlendirmelerini sağlar. Kuruluşlar, projelerini tanıtabilir, kitlelerini belirli konularda bilinçlendirebilir ve destekçilere erişebilir. Tüm bunlara ek olarak, akış bölümünde paylaşımlarda bulunabilir ve kitlelerin düşüncelerini yorumlar aracılığıyla görebilirler. Etkinlikler ve eğitimler sonrasında sertifikalar, peçler ve rozetler vererek kullanıcıları teşvik edebilirler. Bu rozetleri, peçleri veya sertifikaları profilinde sergileyen kullanıcılar, etkinliklere katılımlarını gösterebilirler.
+
+ Kısacası Bonté, toplumda sosyal fayda sağlayan kuruluşlarla bireyleri bir araya getirerek etkileşimi artırır ve toplumsal dayanışmayı teşvik eder.
+ 
 - **Uygulama birincil fonksiyonu**:Bu uygulama, sosyal fayda sağlayan kuruluşları hedef kitleleriyle bir araya getirerek iletişimi kolaylaştırır. Kullanıcılar, kuruluşların etkinliklerine ve eğitimlerine kolaylıkla ulaşırken, kuruluşlar da hedef kitleleriyle daha iyi iletişim kurabilirler. Amacımız, topluma daha fazla değer katarken yardımlaşma ve dayanışmayı teşvik etmektir.
 - **Uygulama ikincil fonksiyonu**:Uygulama aynı zamanda kullanıcılara etkileşimde bulunabilecekleri kişisel profiller sunar. Kullanıcılar, farklı kuruluşları keşfedebilir, etkinliklere katılabilir ve eğitimlere erişebilir. Profillerinde kazandıkları rozetler, peçler ve sertifikaları sergileyerek sosyal faydalarını gösterebilirler. Ayrıca, kuruluşların paylaşımlarıyla etkileşime geçebilir, düşüncelerini paylaşabilir ve ilgi duydukları konularla ilgili derneklere katkıda bulunabilirler. Bu şekilde, uygulama kullanıcılarına hem topluma katkıda bulunma imkanı sunar hem de kişisel gelişimlerine destek olur.
 ## Ürün Özellikleri
-- ...
+- Kullanıcıları, kuruluşların faaliyetlerinden haberdar edip, onlara ulaşım kolaylığı sağlar.Aynı şekilde kuruluşları da, projelerine destek olmak isteyen kullanıcılara kolaylıkla ulaşabilmeleri ve onlarla iletişim kurabilmelerine imkan tanır.
+- Kullanıcılarına, gönüllü faaliyetlere kolaylıkla katılım sağlama, eğitimlere dahil olma, kuruluşları takip etme, bağış yapma ve gelişmelerini izleme imkanı sunar.
+- Farklı kuruluşları keşfetme ve etkinliklere katılma imkanı sağlar.
+- Kullanıcılara etkileşimde bulunabilecekleri kişisel profiller sunar.
+- Eğitimlere kaydolma ve çevrim içi etkinliklere hemen erişme olanağı sunar.
+- Kullanıcılarına etkinlikler ve eğitimler sonrasında sertifikalar, peçler ve rozetler vererek kullanıcıları teşvik eder. Sertifikalar, peçler ve rozetler kişilerin profillerini özelleştirmelerini sağlar.
+- Kuruluşların paylaşımlarıyla etkileşime geçme ve düşüncelerini paylaşma imkanı verir.
+- İlgi duyulan konularla ilgili dernekleri bulup çalışmalarına katkıda bulunma fırsatı sunar.
+- Kuruluşlar hedef kitlelerine direkt olarak ulaşabilir.
+- Kuruluşların hedef kitlelerine kolaylıkla ulaşmalarını ve iletişimi güçlendirmelerini sağlar.
 ## Hedef Kitle
 - Sosyal yardımlaşma ve dayanışma kurumları
 - Kurum bünyesinde çalışan insanlar
@@ -30,14 +41,14 @@ Takım Flutter 127
 - Yardıma ihtiyacı olan inanlar
 - Kurumları ve ilerleyişi takip etmek isteyen insanlar
 ## Juriye Not
-...
+Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi açısından product backlog URL'ye alternatif çalışmaların da screenshotları yerleştirilmiştir.
 ---
 # Sprint 1
-- **Sprint içinde tamamlanması tahmin edilen puan**: 20 Puan
+- **Sprint içinde tamamlanması tahmin edilen puan**: 15 Puan
 - **Puan tamamlama sistemi**:
-- 1.sprint :20
+- 1.sprint :15
 - 2.sprint :40
-- 1.sprint :40
+- 3.sprint :45
 - **Daily Scrum**: ...
 - **Daily Scrum**: ...
 - 
@@ -47,7 +58,7 @@ Takım Flutter 127
 - **Sprint Review**: ...
 
 - **Sprint Retrospective:**
-  - Süreç içinde alınan kararların kesinleşmesi ve sağlam adımlar atılması adına her toplantıda bir önceki toplantının konusu üzerinden geçildi. Tasarım ve fikir aşaması 1. sprintin büyük bölümünü kapsadı. 2.sprint daha fazla ürün çıkarmaya yöenlik çalışılması üzerine kararkar alındı.
+  - Süreç içinde alınan kararların kesinleşmesi ve sağlam adımlar atılması adına her toplantıda bir önceki toplantının konusu üzerinden geçildi. Tasarım ve fikir aşaması 1. sprintin büyük bölümünü kapsadı. 2.sprint daha fazla ürün çıkarmaya yönelik çalışılması üzerine kararlar alındı.
 ---
 ## Product Backlog URL
 ....
