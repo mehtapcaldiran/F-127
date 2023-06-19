@@ -45,6 +45,7 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 
 ---
 # Sprint 1
+- **Sprint Notları**: Renk paletleri ve sayfa akış şeması backlog URL kısmında bulunan link üzrinde çalışılmıştır. Linke girilmesi durumunda çalışma kanvasına erişilebilir.
 - **Sprint içinde tamamlanması tahmin edilen puan**: 15 Puan
 - **Puan tamamlama sistemi**:
 - 1.sprint :15
