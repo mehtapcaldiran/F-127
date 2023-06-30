@@ -74,7 +74,11 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır:
 - **Sprint board update**: Sprint board screenshotları: 
 
-- **Ürün Durumu**: Ekran görüntüleri:
+- **Ürün Durumu**: UI Ekran Görüntüleri:
+![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/UI-1.jpg)
+![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/UI-2.jpg)
+![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/UI-3.jpg)
+![Screenshot 4](https://github.com/mehtapcaldiran/F-127/blob/main/UI-4.jpg)
  
 - **Sprint Review**: 
 Alınan kararlar:
