@@ -66,3 +66,22 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 [Flutter Team 127 Figma Backlog Board](https://www.figma.com/file/GnM3NDG7SCPwflDVooV57E/Proje-Tasar%C4%B1m?type=whiteboard&t=OpPCiWqfuLQ6jOfm-0)
 
 ---
+
+# Sprint 2
+
+- **Sprint içinde tamamlanması tahmin edilen puan**: 40 Puan
+
+- **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır:
+- **Sprint board update**: Sprint board screenshotları: 
+
+- **Ürün Durumu**: Ekran görüntüleri:
+ 
+- **Sprint Review**: 
+Alınan kararlar:
+- **Sprint Retrospective:**
+
+  - Takım üyelerinin gelecek sprintlerde daha fazla aktif olması gerektiğine vurgu yapılmıştır.
+---
+## Product Backlog URL
+
+---
