@@ -53,10 +53,10 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - 3.sprint :45
 - **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0.docx)
 - **Sprint board update**:
-- ![trello](https://github.com/mehtapcaldiran/F-127/blob/main/trello.jpg) 
+- ![trello](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/trello.jpg) 
 - **Ürün Durumu**: 
-- ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/Sprint_1/Screenshot_2.jpg)
-- ![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_1.jpg)
+- ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/Screenshot_2.jpg)
+- ![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/Screenshot_1.jpg)
 - **Sprint Review**: Alınan kararlar: Uygulamının konusu ve ismi belirlendi. Genel akış şeması (uygulama içerisinde sayfaların akışı) oluşturuldu. UI tasarımı için renk ve tasarım diline karar verildi. Sprint Review katılımcıları: Emre Yüksel, Hacer Arıburnu, Barış İnan, Mehtap Çaldıran. 
 
 - **Sprint Retrospective:**
@@ -75,10 +75,10 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - **Sprint board update**: Sprint board screenshotları: 
 
 - **Ürün Durumu**: UI Ekran Görüntüleri:
-![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/UI-1.jpg)
-![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/UI-2.jpg)
-![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/UI-3.jpg)
-![Screenshot 4](https://github.com/mehtapcaldiran/F-127/blob/main/UI-4.jpg)
+![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-1.jpg)
+![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-2.jpg)
+![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-3.jpg)
+![Screenshot 4](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-4.jpg)
  
 - **Sprint Review**: Alınan kararlar: UI tasarımının diline karar verildi ve sayfalar çalışıldı. Logo tasarımı yapıldı. Genel akış şemasında düzenlemeler yapıldı ve ağa yeni sayfalar dahil edildi. Bazı sayfaların arka planı çalışıldı. Sprint Review katılımcıları: Emre Yüksel, Hacer Arıburnu, Barış İnan, Mehtap Çaldıran. 
 
