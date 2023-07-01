@@ -55,7 +55,7 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - **Sprint board update**:
 - ![trello](https://github.com/mehtapcaldiran/F-127/blob/main/trello.jpg) 
 - **Ürün Durumu**: 
-- ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/Sprint_1/Screenshot_2.jpg)
+- ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/Sprint_1/Screenshot_2.jpg)
 - ![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_1.jpg)
 - **Sprint Review**: Alınan kararlar: Uygulamının konusu ve ismi belirlendi. Genel akış şeması (uygulama içerisinde sayfaların akışı) oluşturuldu. UI tasarımı için renk ve tasarım diline karar verildi. Sprint Review katılımcıları: Emre Yüksel, Hacer Arıburnu, Barış İnan, Mehtap Çaldıran. 
 
