@@ -1,5 +1,5 @@
 # Sprint 2
-- **Sprint Notları**: Sprint sürecinde grup üyelerimizden birisi farkında olmadan farklı bir github adresi ile düzenleme yaptığı için katılımcılar arasında gruba dahil olmayan bir github hesabı(busekeklik) görünmektedir. Durumun yanlış anlaşılmaması için bu notu ekledik.
+- **Sprint Notları**: Sprint sürecinde grup üyelerimizden birisi farkında olmadan farklı bir git config bilgileri ile düzenleme yaptığı için katılımcılar arasında gruba dahil olmayan bir github hesabı(busekeklik) görünmektedir. Durumun yanlış anlaşılmaması için bu notu ekledik.
 - **Sprint içinde tamamlanması tahmin edilen puan**: 30 Puan
 - **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri2](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0-2.docx)
 - **Sprint board update**:
