@@ -10,9 +10,9 @@
 ![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/Screenshot_1.jpg)
 
 -**UI Tasarımı Ekran Görüntüleri**:
-![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-1.jpg)
-![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-2.jpg)
-![Screenshot 4](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-3.jpg)
+![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/UI-1.jpg)
+![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/UI-2.jpg)
+![Screenshot 4](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/UI-3.jpg)
 ![Screenshot 5](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/UI-4.jpg)
 ![Screenshot 6](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/UI-5.jpg)
 ![Screenshot 7](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_2/UI-6.jpg)
