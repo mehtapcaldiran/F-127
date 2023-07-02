@@ -41,7 +41,7 @@ Takım Flutter 127
 - Yardıma ihtiyacı olan inanlar
 - Kurumları ve ilerleyişi takip etmek isteyen insanlar
 ## Juriye Not 
-Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi açısından product backlog URL'ye alternatif çalışmaların da screenshotları yerleştirilmiştir.
+Sprint-2 sürecinde grup üyelerimizden birisi farkında olmadan farklı bir github adresi ile düzenleme yaptığı için katılımcılar arasında gruba dahil olmayan bir github hesabı(busekeklik) görünmektedir. Durumun yanlış anlaşılmaması adına bu açıklama notunu eklemiş bulunuyoruz. 
 
 ---
 # Sprint 1
@@ -49,8 +49,8 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 - **Sprint içinde tamamlanması tahmin edilen puan**: 15 Puan
 - **Puan tamamlama sistemi**:
 - 1.sprint :15
-- 2.sprint :40
-- 3.sprint :45
+- 2.sprint :30
+- 3.sprint :55
 - **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0.docx)
 - **Sprint board update**:
 - ![trello](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/trello.jpg) 
@@ -68,13 +68,15 @@ Sprintteki ilerleyişin anlaşılması ve üretim arkaplanının incelenmesi aç
 ---
 
 # Sprint 2
-
-- **Sprint içinde tamamlanması tahmin edilen puan**: 40 Puan
-- **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır:
+- **Sprint Notları**: Sprint sürecinde grup üyelerimizden birisi farkında olmadan farklı bir github adresi ile düzenleme yaptığı için katılımcılar arasında gruba dahil olmayan bir github hesabı(busekeklik) görünmektedir. Durumun yanlış anlaşılmaması için bu notu ekledik.
+- **Sprint içinde tamamlanması tahmin edilen puan**: 30 Puan
+- **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri2](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0-2.docx)
 - **Sprint board update**:
 ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_2.jpg)
-- **Ürün Durumu**: UI Ekran Görüntüleri:
-![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_1.jpg)  
+- **Ürün Durumu**:
+-**Sayfa Akış Şeması Ekran Görüntüsü**:
+![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_1.jpg)
+-**UI Tasarımı Ekran Görüntüleri**:
 ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-1.jpg)
 ![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-2.jpg)
 ![Screenshot 4](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-3.jpg)
