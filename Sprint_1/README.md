@@ -87,7 +87,7 @@ Sprint-2 sürecinde grup üyelerimizden birisi farkında olmadan farklı bir git
 ![Screenshot 7](https://github.com/mehtapcaldiran/F-127/blob/main/UI-6.jpg)
 ![Screenshot 8](https://github.com/mehtapcaldiran/F-127/blob/main/UI-7.jpg)
 
--**Kodlanan Sayfaların Ekran Görüntüleri**:
+-**Kodlanan Sayfaların Ekran Görüntüleri**: Emre Yüksel
 ![Giris1](https://github.com/mehtapcaldiran/F-127/blob/main/Giri%C5%9F1.jpeg)
 ![Giris2](https://github.com/mehtapcaldiran/F-127/blob/main/Giri%C5%9F2.jpeg)
 ![Kayıt](https://github.com/mehtapcaldiran/F-127/blob/main/Kay%C4%B1t.jpeg)
