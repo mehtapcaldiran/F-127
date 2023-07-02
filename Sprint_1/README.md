@@ -74,8 +74,10 @@ Sprint-2 sürecinde grup üyelerimizden birisi farkında olmadan farklı bir git
 - **Sprint board update**:
 ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_2.jpg)
 - **Ürün Durumu**:
+
 -**Sayfa Akış Şeması Ekran Görüntüsü**:
 ![Screenshot 1](https://github.com/mehtapcaldiran/F-127/blob/main/Screenshot_1.jpg)
+
 -**UI Tasarımı Ekran Görüntüleri**:
 ![Screenshot 2](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-1.jpg)
 ![Screenshot 3](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_1/UI-2.jpg)
@@ -84,6 +86,7 @@ Sprint-2 sürecinde grup üyelerimizden birisi farkında olmadan farklı bir git
 ![Screenshot 6](https://github.com/mehtapcaldiran/F-127/blob/main/UI-5.jpg)
 ![Screenshot 7](https://github.com/mehtapcaldiran/F-127/blob/main/UI-6.jpg)
 ![Screenshot 8](https://github.com/mehtapcaldiran/F-127/blob/main/UI-7.jpg)
+
 - **Sprint Review**: Alınan kararlar: UI tasarımının diline karar verildi ve sayfalar çalışıldı. Logo tasarımı yapıldı. Genel akış şemasında düzenlemeler yapıldı ve ağa yeni sayfalar dahil edildi. Bazı sayfaların arka planı çalışıldı. Sprint Review katılımcıları: Emre Yüksel, Hacer Arıburnu, Barış İnan, Mehtap Çaldıran. 
 
 - **Sprint Retrospective:**
