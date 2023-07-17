@@ -8,12 +8,9 @@
 
 - **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri3](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0-3.docx)
 - **Sprint board update**:
-
+![trello3](https://github.com/mehtapcaldiran/F-127/blob/main/Sprint_3/trello3.jpg)
 - **Ürün Durumu**:
-
--**Sayfa Akış Şeması Ekran Görüntüsü**:
-
--**Kodlanan Sayfaların Ekran Görüntüleri**: Emre Yüksel
+-
 
 - **Sprint Review**: Alınan kararlar: UI tasarımı yapılan sayfaların kodlaması yapıldı. Sprint Review katılımcıları: Emre Yüksel, Hacer Arıburnu, Barış İnan, Mehtap Çaldıran. 
 
