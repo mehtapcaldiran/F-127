@@ -19,6 +19,7 @@ import 'package:bonte/screens/open_screen.dart';
 import 'package:bonte/screens/reset_password_screen.dart';
 import 'package:bonte/screens/search_screen.dart';
 import 'package:bonte/screens/signup_screen.dart';
+import 'package:bonte/screens/kullanici_screens/your_kullanici_profile_screen.dart';
 import 'package:bonte/screens/kurumsal_screens/your_kurumsal_profile_screen.dart';
 import 'package:bonte/utilis/etkinlik_info_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -34,6 +35,7 @@ final _shellNavigator = GlobalKey<NavigatorState>();
 
 final goRouterProvider = Provider<GoRouter>((ref) {
 
+  final userPreferences = ref.read(userPreferencesProvider);
 
   return GoRouter(
     navigatorKey: _rootNavigator,
@@ -92,28 +94,28 @@ final goRouterProvider = Provider<GoRouter>((ref) {
               ),
               StatefulShellBranch(
                   routes: <RouteBase>[
-                    GoRoute(
-                      path: '/yourKurumsalProfile',
-                      name: yourKurumsalProfile,
-                      pageBuilder: (context, state) {
-                        return NoTransitionPage(
-                            child: YourKurumsalProfile(
-                              key: state.pageKey,
-                            )
-                        );
-                      },
-                    ),
                     //GoRoute(
-                    //  path: '/yourKullaniciProfile',
-                    //  name: yourKullaniciProfile,
+                    //  path: '/yourKurumsalProfile',
+                    //  name: yourKurumsalProfile,
                     //  pageBuilder: (context, state) {
                     //    return NoTransitionPage(
-                    //        child: YourKullaniciProfile(
+                    //        child: YourKurumsalProfile(
                     //          key: state.pageKey,
                     //        )
                     //    );
                     //  },
                     //),
+                    GoRoute(
+                      path: '/yourKullaniciProfile',
+                      name: yourKullaniciProfile,
+                      pageBuilder: (context, state) {
+                        return NoTransitionPage(
+                            child: YourKullaniciProfile(
+                              key: state.pageKey,
+                            )
+                        );
+                      },
+                    ),
                   ],
               ),
             ],

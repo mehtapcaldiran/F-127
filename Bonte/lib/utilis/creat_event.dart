@@ -1,12 +1,15 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
+import '../model_providers/badges_provider.dart';
+import '../model_providers/events_provider.dart';
+import '../model_providers/user_kullanici_provider.dart';
+import 'badge_show.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
-void main() => runApp(const CreatEvent());
+void main() => runApp(CreatEvent());
 
 class CreatEvent extends ConsumerStatefulWidget {
   const CreatEvent({super.key});
@@ -23,8 +26,8 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
   @override
   Widget build(BuildContext context) {
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     Future<void> pickImage() async {
       try {
@@ -33,9 +36,7 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
         final imageTemp = XFile(image.path);
         setState(() => this.image = imageTemp);
       } catch (e) {
-        if (kDebugMode) {
-          print('Failed to pick image: $e');
-        }
+        print('Failed to pick image: $e');
       }
     }
 
@@ -46,46 +47,60 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
         final imageTemp = XFile(image.path);
         setState(() => this.image = imageTemp);
       } catch (e) {
-        if (kDebugMode) {
-          print('Failed to pick image from camera: $e');
-        }
+        print('Failed to pick image from camera: $e');
       }
     }
 
 
 
 
+    Future<String> uploadImageToFirebase(XFile xfile) async {
+      try {
+        if (xfile == null) return '';
+        final File imageFile = File(xfile.path);
+        final String fileName = DateTime.now().millisecondsSinceEpoch.toString();
+        final firebase_storage.Reference firebaseStorageRef =
+        firebase_storage.FirebaseStorage.instance.ref().child('images/$fileName');
+        await firebaseStorageRef.putFile(imageFile);
+        final imageUrl = await firebaseStorageRef.getDownloadURL();
+        print('Image URL: $imageUrl');
+        return imageUrl; // imageUrl'ü döndür
+      } catch (e) {
+        print('Failed to upload image: $e');
+        return ''; // Hata durumunda boş bir string döndür
+      }
+    }
 
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         actions: [
           TextButton(
               onPressed: () {
               },
-              child: const Text(
+              child: Text(
                 'Kaydet',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff1b5966b),
+                  color: Color(0xFF1B5966B),
                 ),
               )
           ),
         ],
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -98,21 +113,21 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
           child: Center(
             child: Column(
               children: [
-                SizedBox(
-                  height: pHeight * 0.21,
-                  width: pWidth,
+                Container(
+                  height: p_height * 0.21,
+                  width: p_width,
                   child: Stack(
                     children: [
                       InkWell(
                         child: ClipRRect(
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               topRight: Radius.circular(40.0),
                               topLeft: Radius.circular(40.0),
                             ),
                             child: Container(
-                              height: pHeight * 0.18,
-                              width: pWidth,
-                              decoration: const BoxDecoration(
+                              height: p_height * 0.18,
+                              width: p_width,
+                              decoration: BoxDecoration(
                                 color: Colors.grey, // Varsayılan bir renk veya diğer dekorasyonları ekleyebilirsiniz
                               ),
                               child: image != null
@@ -120,7 +135,7 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                                 File(image!.path),
                                 fit: BoxFit.cover,
                               )
-                                  : const ColoredBox(color: Colors.white12),
+                                  : ColoredBox(color: Colors.white12),
                             )
                         ),
                         onTap: (){
@@ -131,15 +146,15 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   ListTile(
-                                    leading: const Icon(Icons.photo),
-                                    title: const Text('Galeri'),
+                                    leading: Icon(Icons.photo),
+                                    title: Text('Galeri'),
                                     onTap: () async {
                                       await pickImage();
                                     },
                                   ),
                                   ListTile(
-                                    leading: const Icon(Icons.camera_alt_outlined),
-                                    title: const Text('Kamera'),
+                                    leading: Icon(Icons.camera_alt_outlined),
+                                    title: Text('Kamera'),
                                     onTap: () async {
                                       await pickImageFromCamera();
                                     },
@@ -155,7 +170,7 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                 ),
                 Stack(
                   children: [
-                    const Positioned(
+                    Positioned(
                       top: 21,
                       left: 0,
                       child: Text(
@@ -168,16 +183,16 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                       ),
                     ),
                     Container(
-                      height: pHeight * 0.062,
-                      width: pWidth * 0.8,
-                      margin: const EdgeInsets.only(top: 40),
+                      height: p_height * 0.062,
+                      width: p_width * 0.8,
+                      margin: EdgeInsets.only(top: 40),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                        border: Border.all(width: 1, color: Color(0xFF1B5966),),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(7),
+                        padding: EdgeInsets.all(7),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: InputBorder.none,
@@ -190,7 +205,7 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                 ),
                 Stack(
                   children: [
-                    const Positioned(
+                    Positioned(
                       top: 21,
                       left: 0,
                       child: Text(
@@ -203,16 +218,16 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                       ),
                     ),
                     Container(
-                      height: pHeight * 0.15,
-                      width: pWidth * 0.8,
-                      margin: const EdgeInsets.only(top: 40),
+                      height: p_height * 0.15,
+                      width: p_width * 0.8,
+                      margin: EdgeInsets.only(top: 40),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                        border: Border.all(width: 1, color: Color(0xFF1B5966),),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: InputBorder.none,
@@ -225,7 +240,7 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                 ),
                 Stack(
                   children: [
-                    const Positioned(
+                    Positioned(
                       top: 21,
                       left: 0,
                       child: Text(
@@ -238,16 +253,16 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                       ),
                     ),
                     Container(
-                      height: pHeight * 0.15,
-                      width: pWidth * 0.8,
-                      margin: const EdgeInsets.only(top: 40),
+                      height: p_height * 0.15,
+                      width: p_width * 0.8,
+                      margin: EdgeInsets.only(top: 40),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(10),
-                        border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                        border: Border.all(width: 1, color: Color(0xFF1B5966),),
                       ),
                       child: Padding(
-                        padding: const EdgeInsets.all(10),
+                        padding: EdgeInsets.all(10),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             border: InputBorder.none,
@@ -258,7 +273,7 @@ class _EtkinlikInfoState extends ConsumerState<CreatEvent> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 20,),
+                SizedBox(height: 20,),
               ],
             ),
           ),

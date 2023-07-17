@@ -1,3 +1,4 @@
+import 'package:bonte/models/user_kullanici_model.dart';
 import 'package:bonte/utilis/badge_show.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -6,7 +7,7 @@ import '../../model_providers/badges_provider.dart';
 import '../../model_providers/events_provider.dart';
 import '../../model_providers/user_kullanici_provider.dart';
 
-void main() => runApp(const YourKullaniciProfile());
+void main() => runApp(YourKullaniciProfile());
 
 class YourKullaniciProfile extends ConsumerStatefulWidget {
   const YourKullaniciProfile({Key? key}) : super(key: key);
@@ -29,8 +30,8 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
   Widget build(BuildContext context) {
 
     final userPreferences = ref.read(userPreferencesProvider);
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
 
     final mainBadgeProvider0 = ref.read(badgesPreferencesProvider(userPreferences.value!.mainBadges[0]));
@@ -48,14 +49,14 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
     final eventProvider2 = ref.read(eventsPreferencesProvider("579pesDiGlLLcLWwL1Oi"));
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         actions: [
           IconButton(
               onPressed: (){
                 context.go('/kullaniciSettings');
               },
-              icon: const Icon(
+              icon: Icon(
                   Icons.settings,
                 color: Colors.grey,
                 size: 35,
@@ -63,17 +64,17 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
           ),
         ],
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.go('/');
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -83,12 +84,12 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
           child: Column(
             children: [
               Container(
-                padding: const EdgeInsets.only(top: 10,),
-                height: pHeight * 0.35,
-                width: pWidth * 0.9,
+                padding: EdgeInsets.only(top: 10,),
+                height: p_height * 0.35,
+                width: p_width * 0.9,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Column(
                   children: [
@@ -97,21 +98,21 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                         backgroundColor: userPreferences.value!.image != "" ? Colors.transparent : Colors.grey,
                           radius: 70,
                         ),
-                    const SizedBox(height: 10,),
+                    SizedBox(height: 10,),
                     Text(
                       '${userPreferences.value?.name} ${userPreferences.value?.surname}',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
                       ),
                     ),
                     Text(
                       '${userPreferences.value?.loc}',
-                      style: const TextStyle(
+                      style: TextStyle(
                         fontSize: 15,
                       ),
                     ),
-                    const SizedBox(height: 10,),
+                    SizedBox(height: 10,),
                              Row(
                                mainAxisAlignment: MainAxisAlignment.center,
                                children: [
@@ -133,7 +134,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                      ),
                                    ),
                                  ),
-                                 const SizedBox(width: 20,),
+                                 SizedBox(width: 20,),
                                  InkWell(
                                    onTap: () {
                                      badgeShow(
@@ -157,35 +158,35 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                   ],
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Container(
-                height: pHeight * 0.18,
-                width: pWidth * 0.9,
-                padding: const EdgeInsets.all(15),
+                height: p_height * 0.18,
+                width: p_width * 0.9,
+                padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Center(child: Text(
                   '${userPreferences.value?.info}',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 17,
                     ),
                   ),
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Container(
-                height: pHeight * 0.11,
-                width: pWidth * 0.9,
-                padding: const EdgeInsets.all(10),
+                height: p_height * 0.11,
+                width: p_width * 0.9,
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Stack(
                   children: [
-                    const Text(
+                    Text(
                       'Rozet Vitrini',
                       style: TextStyle(
                         fontSize: 20,
@@ -193,7 +194,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                       ),
                     ),
                     Positioned(
-                      top: pHeight * 0.025,
+                      top: p_height * 0.025,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -215,7 +216,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -234,7 +235,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -253,7 +254,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -272,7 +273,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -291,12 +292,12 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 10,),
+                          SizedBox(width: 10,),
                           IconButton(
                             onPressed: (){
                               context.push('/badges');
                               },
-                            icon: const Icon(Icons.arrow_forward_ios),
+                            icon: Icon(Icons.arrow_forward_ios),
                           ),
                         ],
                       ),
@@ -304,18 +305,18 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                   ],
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Container(
-                height: pHeight * 0.11,
-                width: pWidth * 0.9,
-                padding: const EdgeInsets.all(10),
+                height: p_height * 0.11,
+                width: p_width * 0.9,
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Stack(
                   children: [
-                    const Text(
+                    Text(
                       'Peç Vitrini',
                       style: TextStyle(
                         fontSize: 20,
@@ -323,7 +324,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                       ),
                     ),
                     Positioned(
-                      top: pHeight * 0.025,
+                      top: p_height * 0.025,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -337,7 +338,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                             child: Container(
                               width: 40,
                               height: 40,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage("https://img.icons8.com/?size=512&id=w8pFmJ5x2OZV&format=png"),
                                   fit: BoxFit.cover,
@@ -345,7 +346,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -356,7 +357,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                             child: Container(
                               width: 40,
                               height: 40,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage("https://img.icons8.com/?size=512&id=HFfgVaJNpYdO&format=png"),
                                   fit: BoxFit.cover,
@@ -364,7 +365,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -375,7 +376,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                             child: Container(
                               width: 40,
                               height: 40,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage("https://img.icons8.com/?size=512&id=WomxPe5K20Ry&format=png"),
                                   fit: BoxFit.cover,
@@ -383,7 +384,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -394,7 +395,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                             child: Container(
                               width: 40,
                               height: 40,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage("https://img.icons8.com/?size=512&id=VaG7UrLy8YNk&format=png"),
                                   fit: BoxFit.cover,
@@ -402,7 +403,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 20,),
+                          SizedBox(width: 20,),
                           InkWell(
                             onTap: () {
                               badgeShow(
@@ -413,7 +414,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                             child: Container(
                               width: 40,
                               height: 40,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: NetworkImage("https://img.icons8.com/?size=512&id=W0YLRoq5ZGgR&format=png"),
                                   fit: BoxFit.cover,
@@ -421,12 +422,12 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               ),
                             ),
                           ),
-                          const SizedBox(width: 10,),
+                          SizedBox(width: 10,),
                           IconButton(
                             onPressed: (){
                               context.push('/badgesTwo');
                             },
-                            icon: const Icon(Icons.arrow_forward_ios),
+                            icon: Icon(Icons.arrow_forward_ios),
                           ),
                         ],
                       ),
@@ -434,20 +435,20 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                   ],
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Container(
-                height: pHeight * 0.25,
-                width: pWidth * 0.9,
-                padding: const EdgeInsets.all(10),
+                height: p_height * 0.25,
+                width: p_width * 0.9,
+                padding: EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Column(
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(right: pWidth * 0.39,),
-                      child: const Text(
+                      padding: EdgeInsets.only(right: p_width * 0.39,),
+                      child: Text(
                         'Katıldığı Etkinlikler',
                         style: TextStyle(
                           fontSize: 20,
@@ -455,7 +456,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                         ),
                       ),
                     ),
-                    const SizedBox(height: 5,),
+                    SizedBox(height: 5,),
                     Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
@@ -464,15 +465,15 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                 context.push('/etkinlikInfo');
                               },
                               child: Card(
-                                color: const Color(0xFFD6D4D4),
+                                color: Color(0xFFD6D4D4),
                                 child: SizedBox(
-                                  height: pHeight * 0.17,
-                                  width: pWidth * 0.2,
+                                  height: p_height * 0.17,
+                                  width: p_width * 0.2,
                                   child: Column(
                                     children: [
                                       Container(
-                                        height: pHeight *0.08,
-                                        width: pWidth * 0.2,
+                                        height: p_height *0.08,
+                                        width: p_width * 0.2,
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(10),
                                           image: DecorationImage(
@@ -481,9 +482,9 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(height: 10,),
+                                      SizedBox(height: 10,),
                                       Text(
-                                        eventProvider.value!.eventName,
+                                        '${eventProvider.value!.eventName}',
                                       ),
                                     ],
                                   ),
@@ -495,15 +496,15 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                 context.push('/etkinlikInfo');
                               },
                               child: Card(
-                                color: const Color(0xFFD6D4D4),
+                                color: Color(0xFFD6D4D4),
                                 child: SizedBox(
-                                  height: pHeight * 0.17,
-                                  width: pWidth * 0.2,
+                                  height: p_height * 0.17,
+                                  width: p_width * 0.2,
                                   child: Column(
                                     children: [
                                       Container(
-                                        height: pHeight *0.08,
-                                        width: pWidth * 0.2,
+                                        height: p_height *0.08,
+                                        width: p_width * 0.2,
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(10),
                                           image: DecorationImage(
@@ -512,8 +513,8 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(height: 10,),
-                                      Text(eventProvider1.value!.eventName,),
+                                      SizedBox(height: 10,),
+                                      Text('${eventProvider1.value!.eventName}',),
                                     ],
                                   ),
                                 ),
@@ -527,15 +528,15 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                 context.push('/etkinlikInfo');
                               },
                               child: Card(
-                                color: const Color(0xFFD6D4D4),
+                                color: Color(0xFFD6D4D4),
                                 child: SizedBox(
-                                  height: pHeight * 0.17,
-                                  width: pWidth * 0.2,
+                                  height: p_height * 0.17,
+                                  width: p_width * 0.2,
                                   child: Column(
                                     children: [
                                       Container(
-                                        height: pHeight *0.08,
-                                        width: pWidth * 0.2,
+                                        height: p_height *0.08,
+                                        width: p_width * 0.2,
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(10),
                                           image: DecorationImage(
@@ -544,8 +545,8 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                                           ),
                                         ),
                                       ),
-                                      const SizedBox(height: 10,),
-                                      Text(eventProvider2.value!.eventName,),
+                                      SizedBox(height: 10,),
+                                      Text('${eventProvider2.value!.eventName}',),
                                     ],
                                   ),
                                 ),
@@ -555,7 +556,7 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                               onPressed: (){
                                 context.push('/katildigiEtkinlikler');
                               },
-                              icon: const Icon(Icons.arrow_forward_ios),
+                              icon: Icon(Icons.arrow_forward_ios),
                             ),
                           ],
                         ),
@@ -563,19 +564,19 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                 ),
               ),
                 Padding(
-                  padding: const EdgeInsets.only(top:15),
+                  padding: EdgeInsets.only(top:15),
                   child: Container(
-                    height: pHeight * 0.1,
-                    width: pWidth * 0.9,
-                    padding: const EdgeInsets.all(10),
+                    height: p_height * 0.1,
+                    width: p_width * 0.9,
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color(0xFFD6D4D4),
+                      color: Color(0xFFD6D4D4),
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Text(
+                        Text(
                           'Aktiviteler',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
@@ -584,13 +585,13 @@ class _YourKullaniciProfileState extends ConsumerState<YourKullaniciProfile> {
                         ),
                         IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.arrow_forward_ios),
+                            icon: Icon(Icons.arrow_forward_ios),
                         ),
                       ],
                     ),
                   ),
                 ),
-              const SizedBox(height: 20,),
+              SizedBox(height: 20,),
             ],
           ),
         ),

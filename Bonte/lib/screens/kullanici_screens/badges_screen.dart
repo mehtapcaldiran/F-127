@@ -6,7 +6,7 @@ import '../../model_providers/badges_provider.dart';
 import '../../model_providers/user_kullanici_provider.dart';
 import '../../utilis/badge_show.dart';
 
-void main() => runApp(const Badges());
+void main() => runApp(Badges());
 
 class Badges extends ConsumerStatefulWidget {
   const Badges({super.key});
@@ -29,6 +29,8 @@ class _BadgesTwoState extends ConsumerState<Badges> {
   Widget build(BuildContext context) {
 
     final userPreferences = ref.read(userPreferencesProvider);
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     final badgesProvider0 = ref.read(badgesPreferencesProvider(userPreferences.value!.badgesShowcase[0]));
     final badgesProvider1 = ref.read(badgesPreferencesProvider(userPreferences.value!.badgesShowcase[1]));
@@ -42,26 +44,27 @@ class _BadgesTwoState extends ConsumerState<Badges> {
     final badgesProvider9 = ref.read(badgesPreferencesProvider("badge5"));
     final badgesProvider01 = ref.read(badgesPreferencesProvider("badge6"));
     final badgesProvider02 = ref.read(badgesPreferencesProvider("badge7"));
+    final badgesProvider03 = ref.read(badgesPreferencesProvider("badge8"));
 
 
 
 
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -72,10 +75,10 @@ class _BadgesTwoState extends ConsumerState<Badges> {
             Expanded(
               child: ListView(
                 shrinkWrap: true,
-                physics: const ClampingScrollPhysics(),
+                physics: ClampingScrollPhysics(),
                 children: [
-                  const SizedBox(height: 30,),
-                  const Center(
+                  SizedBox(height: 30,),
+                  Center(
                     child: Text('Rozetler',
                       style: TextStyle(
                         fontSize: 30,
@@ -84,7 +87,7 @@ class _BadgesTwoState extends ConsumerState<Badges> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -146,7 +149,7 @@ class _BadgesTwoState extends ConsumerState<Badges> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -208,7 +211,7 @@ class _BadgesTwoState extends ConsumerState<Badges> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -270,7 +273,7 @@ class _BadgesTwoState extends ConsumerState<Badges> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [

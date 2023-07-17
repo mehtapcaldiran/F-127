@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() => runApp(const SignUp());
+void main() => runApp(SignUp());
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -20,24 +20,24 @@ class _SignUpState extends State<SignUp> {
 
   @override
   Widget build(BuildContext context) {
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: const Color(0xFFD9F0F5),
+          backgroundColor: Color(0xFFD9F0F5),
           leading: Container(
-            padding: const EdgeInsets.only(left: 5, top: 5),
+            padding: EdgeInsets.only(left: 5, top: 5),
             child: IconButton(
               onPressed: () {
                 context.pop();
               },
-              icon: const Icon(
+              icon: Icon(
                 Icons.arrow_back,
                 size: 35,
-                color: Color(0xff1b5966b),
+                color: Color(0xFF1B5966B),
               ),
             ),
           ),
@@ -46,99 +46,101 @@ class _SignUpState extends State<SignUp> {
           onTap: () {
             FocusScope.of(context).unfocus();
           },
-          child: Center(
-            child: SingleChildScrollView(
-              child: Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 32,),
-                      child: Row(
-                        children: [
-                          SizedBox(
-                            height: pHeight * 0.04,
-                            width: pWidth * 0.4,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all<Color>(
-                                  _selec == 0
-                                      ? const Color(0xFFB3E1EB)
-                                      : const Color(0xFF1B5966),
-                                ),
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8),
-                                    side: const BorderSide(
-                                      color: Colors.black,
-                                      width: 1,
+          child: Container(
+              child: Center(
+                child: SingleChildScrollView(
+                  child: Column(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(left: 32,),
+                          child: Row(
+                            children: [
+                              Container(
+                                height: p_height * 0.04,
+                                width: p_width * 0.4,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(
+                                      _selec == 0
+                                          ? Color(0xFFB3E1EB)
+                                          : Color(0xFF1B5966),
+                                    ),
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        side: BorderSide(
+                                          color: Colors.black,
+                                          width: 1,
+                                        ),
+                                      ),
+                                    ),
+                                    foregroundColor: MaterialStateProperty.all<Color>(
+                                      _selec == 0 ? Color(0xFF1B5966) : Colors.white,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      _selec =
+                                          0; // Kullanıcı butonuna tıklandığında _selec değerini güncelle
+                                    });
+                                  },
+                                  child: Text(
+                                    'Kullanıcı',
+                                    style: TextStyle(
+                                      fontSize: 15,
                                     ),
                                   ),
                                 ),
-                                foregroundColor: MaterialStateProperty.all<Color>(
-                                  _selec == 0 ? const Color(0xFF1B5966) : Colors.white,
-                                ),
                               ),
-                              onPressed: () {
-                                setState(() {
-                                  _selec =
-                                      0; // Kullanıcı butonuna tıklandığında _selec değerini güncelle
-                                });
-                              },
-                              child: const Text(
-                                'Kullanıcı',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 15),
-                          SizedBox(
-                            height: pHeight * 0.04,
-                            width: pWidth * 0.4,
-                            child: ElevatedButton(
-                              style: ButtonStyle(
-                                backgroundColor: MaterialStateProperty.all<Color>(
-                                  _selec == 1
-                                      ? const Color(0xFFB3E1EB)
-                                      : const Color(0xFF1B5966),
-                                ),
-                                shape: MaterialStateProperty.all<
-                                    RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(8),
-                                    side: const BorderSide(
-                                      color: Colors.black,
-                                      width: 1,
+                              SizedBox(width: 15),
+                              Container(
+                                height: p_height * 0.04,
+                                width: p_width * 0.4,
+                                child: ElevatedButton(
+                                  style: ButtonStyle(
+                                    backgroundColor: MaterialStateProperty.all<Color>(
+                                      _selec == 1
+                                          ? Color(0xFFB3E1EB)
+                                          : Color(0xFF1B5966),
+                                    ),
+                                    shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                      RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8),
+                                        side: BorderSide(
+                                          color: Colors.black,
+                                          width: 1,
+                                        ),
+                                      ),
+                                    ),
+                                    foregroundColor: MaterialStateProperty.all<Color>(
+                                      _selec == 1 ? Color(0xFF1B5966) : Colors.white,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      _selec =
+                                          1;
+                                    });
+                                  },
+                                  child: Text(
+                                    'Kurumsal',
+                                    style: TextStyle(
+                                      fontSize: 15,
                                     ),
                                   ),
                                 ),
-                                foregroundColor: MaterialStateProperty.all<Color>(
-                                  _selec == 1 ? const Color(0xFF1B5966) : Colors.white,
-                                ),
                               ),
-                              onPressed: () {
-                                setState(() {
-                                  _selec =
-                                      1;
-                                });
-                              },
-                              child: const Text(
-                                'Kurumsal',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ),
+                            ],
                           ),
-                        ],
-                      ),
+                        ),
+                        _selec == 0 ? SignupKullanici() : SignupKurumsal(),
+                      ],
                     ),
-                    _selec == 0 ? const SignupKullanici() : const SignupKurumsal(),
-                  ],
+                  ),
                 ),
               ),
-            ),
         ),
     );
   }
@@ -154,10 +156,10 @@ class SignupKullanici extends StatefulWidget {
 
 class _SignupKullaniciState extends State<SignupKullanici> {
 
-  final TextEditingController _name = TextEditingController();
-  final TextEditingController _surname = TextEditingController();
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _pas = TextEditingController();
+  TextEditingController _name = TextEditingController();
+  TextEditingController _surname = TextEditingController();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _pas = TextEditingController();
 
   String validityCheck() {
     String errors = "";
@@ -172,17 +174,17 @@ class _SignupKullaniciState extends State<SignupKullanici> {
 
   @override
   Widget build(BuildContext context) {
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 25),
+            padding: EdgeInsets.only(top: 25),
             child: Stack(
               children: [
-                const Positioned(
+                Positioned(
                   top: 10,
                   left: 0,
                   child: Text(
@@ -195,16 +197,16 @@ class _SignupKullaniciState extends State<SignupKullanici> {
                   ),
                 ),
                 Container(
-                  height: pHeight * 0.062,
-                  width: pWidth * 0.8,
-                  margin: const EdgeInsets.only(top: 25),
+                  height: p_height * 0.062,
+                  width: p_width * 0.8,
+                  margin: EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                    border: Border.all(width: 1, color: Color(0xFF1B5966),),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(7),
+                    padding: EdgeInsets.all(7),
                     child: TextFormField(
                       controller: _name,
                       decoration: const InputDecoration(
@@ -218,7 +220,7 @@ class _SignupKullaniciState extends State<SignupKullanici> {
           ),
           Stack(
             children: [
-              const Positioned(
+              Positioned(
                 top: 21,
                 left: 0,
                 child: Text(
@@ -231,16 +233,16 @@ class _SignupKullaniciState extends State<SignupKullanici> {
                 ),
               ),
               Container(
-                height: pHeight * 0.062,
-                width: pWidth * 0.8,
-                margin: const EdgeInsets.only(top: 40),
+                height: p_height * 0.062,
+                width: p_width * 0.8,
+                margin: EdgeInsets.only(top: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                  border: Border.all(width: 1, color: Color(0xFF1B5966),),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(7),
+                  padding: EdgeInsets.all(7),
                   child: TextFormField(
                     controller: _surname,
                     decoration: const InputDecoration(
@@ -253,7 +255,7 @@ class _SignupKullaniciState extends State<SignupKullanici> {
           ),
           Stack(
             children: [
-              const Positioned(
+              Positioned(
                 top: 21,
                 left: 0,
                 child: Text(
@@ -266,16 +268,16 @@ class _SignupKullaniciState extends State<SignupKullanici> {
                 ),
               ),
               Container(
-                height: pHeight * 0.062,
-                width: pWidth * 0.8,
-                margin: const EdgeInsets.only(top: 40),
+                height: p_height * 0.062,
+                width: p_width * 0.8,
+                margin: EdgeInsets.only(top: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                  border: Border.all(width: 1, color: Color(0xFF1B5966),),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(7),
+                  padding: EdgeInsets.all(7),
                   child: TextFormField(
                     controller: _email,
                     decoration: const InputDecoration(
@@ -288,7 +290,7 @@ class _SignupKullaniciState extends State<SignupKullanici> {
           ),
           Stack(
             children: [
-              const Positioned(
+              Positioned(
                 top: 21,
                 left: 0,
                 child: Text(
@@ -301,16 +303,16 @@ class _SignupKullaniciState extends State<SignupKullanici> {
                 ),
               ),
               Container(
-                height: pHeight * 0.062,
-                width: pWidth * 0.8,
-                margin: const EdgeInsets.only(top: 40),
+                height: p_height * 0.062,
+                width: p_width * 0.8,
+                margin: EdgeInsets.only(top: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                  border: Border.all(width: 1, color: Color(0xFF1B5966),),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(7),
+                  padding: EdgeInsets.all(7),
                   child: TextFormField(
                     obscureText: true,
                     controller: _pas,
@@ -323,15 +325,15 @@ class _SignupKullaniciState extends State<SignupKullanici> {
             ],
           ),
           Container(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               top: 50,
             ),
-            height: pHeight * 0.12,
-            width: pWidth * 0.7,
+            height: p_height * 0.12,
+            width: p_width * 0.7,
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
-                  const Color(0xFF1B5966),
+                  Color(0xFF1B5966),
                 ),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
@@ -343,6 +345,7 @@ class _SignupKullaniciState extends State<SignupKullanici> {
                 String errors = validityCheck();
 
                 if(errors != ""){
+                 print(errors);
                   return;
                 }
                 try {
@@ -356,9 +359,10 @@ class _SignupKullaniciState extends State<SignupKullanici> {
                   }, SetOptions(merge: true));
                   context.push('/editKullaniciProfile');
                 } catch (e) {
+                  print(e.toString());
                 }
               },
-              child: const Text(
+              child: Text(
                 'Kayıt Ol',
                 style: TextStyle(
                   fontSize: 20,
@@ -382,9 +386,9 @@ class SignupKurumsal extends StatefulWidget {
 }
 
 class _SignupKurumsalState extends State<SignupKurumsal> {
-  final TextEditingController _name = TextEditingController();
-  final TextEditingController _email = TextEditingController();
-  final TextEditingController _pas = TextEditingController();
+  TextEditingController _name = TextEditingController();
+  TextEditingController _email = TextEditingController();
+  TextEditingController _pas = TextEditingController();
 
   String validityCheck() {
     String errors = "";
@@ -398,17 +402,17 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
 
   @override
   Widget build(BuildContext context) {
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 25),
+            padding: EdgeInsets.only(top: 25),
             child: Stack(
               children: [
-                const Positioned(
+                Positioned(
                   top: 8,
                   left: 0,
                   child: Text(
@@ -421,16 +425,16 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
                   ),
                 ),
                 Container(
-                  height: pHeight * 0.062,
-                  width: pWidth * 0.8,
-                  margin: const EdgeInsets.only(top: 25),
+                  height: p_height * 0.062,
+                  width: p_width * 0.8,
+                  margin: EdgeInsets.only(top: 25),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
-                    border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                    border: Border.all(width: 1, color: Color(0xFF1B5966),),
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.all(7),
+                    padding: EdgeInsets.all(7),
                     child: TextFormField(
                       controller: _name,
                       decoration: const InputDecoration(
@@ -444,7 +448,7 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
           ),
           Stack(
             children: [
-              const Positioned(
+              Positioned(
                 top: 21,
                 left: 0,
                 child: Text(
@@ -457,16 +461,16 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
                 ),
               ),
               Container(
-                height: pHeight * 0.062,
-                width: pWidth * 0.8,
-                margin: const EdgeInsets.only(top: 40),
+                height: p_height * 0.062,
+                width: p_width * 0.8,
+                margin: EdgeInsets.only(top: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                  border: Border.all(width: 1, color: Color(0xFF1B5966),),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(7),
+                  padding: EdgeInsets.all(7),
                   child: TextFormField(
                     controller: _email,
                     decoration: const InputDecoration(
@@ -479,7 +483,7 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
           ),
           Stack(
             children: [
-              const Positioned(
+              Positioned(
                 top: 21,
                 left: 0,
                 child: Text(
@@ -492,16 +496,16 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
                 ),
               ),
               Container(
-                height: pHeight * 0.062,
-                width: pWidth * 0.8,
-                margin: const EdgeInsets.only(top: 40),
+                height: p_height * 0.062,
+                width: p_width * 0.8,
+                margin: EdgeInsets.only(top: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(10),
-                  border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                  border: Border.all(width: 1, color: Color(0xFF1B5966),),
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(7),
+                  padding: EdgeInsets.all(7),
                   child: TextFormField(
                     controller: _pas,
                     decoration: const InputDecoration(
@@ -513,15 +517,15 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
             ],
           ),
           Container(
-            padding: const EdgeInsets.only(
+            padding: EdgeInsets.only(
               top: 50,
             ),
-            height: pHeight * 0.12,
-            width: pWidth * 0.7,
+            height: p_height * 0.12,
+            width: p_width * 0.7,
             child: ElevatedButton(
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(
-                  const Color(0xFF1B5966),
+                  Color(0xFF1B5966),
                 ),
                 shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                   RoundedRectangleBorder(
@@ -533,6 +537,7 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
                 String errors = validityCheck();
 
                 if(errors != ""){
+                  print(errors);
                   return;
                 }
                 try {
@@ -545,9 +550,10 @@ class _SignupKurumsalState extends State<SignupKurumsal> {
                   }, SetOptions(merge: true));
                   context.push('/editKurumsalProfile');
                 } catch (e) {
+                  print(e.toString());
                 }
               },
-              child: const Text(
+              child: Text(
                 'Kayıt Ol',
                 style: TextStyle(
                   fontSize: 20,

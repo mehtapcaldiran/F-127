@@ -3,9 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../model_providers/badges_provider.dart';
+import '../../model_providers/user_kullanici_provider.dart';
 import '../../utilis/badge_show.dart';
 
-void main() => runApp(const BadgesTwo());
+void main() => runApp(BadgesTwo());
 
 class BadgesTwo extends ConsumerStatefulWidget {
   const BadgesTwo({super.key});
@@ -29,6 +30,9 @@ class _BadgesTwoEditState extends ConsumerState<BadgesTwo> {
   @override
   Widget build(BuildContext context) {
 
+    final userPreferences = ref.read(userPreferencesProvider);
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
 
     final badgesProvider1 = ref.read(badgesPreferencesProvider("pac1"));
@@ -40,20 +44,20 @@ class _BadgesTwoEditState extends ConsumerState<BadgesTwo> {
 
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -64,10 +68,10 @@ class _BadgesTwoEditState extends ConsumerState<BadgesTwo> {
             Expanded(
               child: ListView(
                 shrinkWrap: true,
-                physics: const ClampingScrollPhysics(),
+                physics: ClampingScrollPhysics(),
                 children: [
-                  const SizedBox(height: 30,),
-                  const Center(
+                  SizedBox(height: 30,),
+                  Center(
                     child: Text('Peçler',
                       style: TextStyle(
                         fontSize: 30,
@@ -76,7 +80,7 @@ class _BadgesTwoEditState extends ConsumerState<BadgesTwo> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -138,7 +142,7 @@ class _BadgesTwoEditState extends ConsumerState<BadgesTwo> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [

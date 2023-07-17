@@ -15,7 +15,7 @@ class _RouteErrorState extends State<RouteError> {
       body: Center(
         child: Column(
           children: [
-            const SizedBox(height: 400 ,),
+            SizedBox(height: 400 ,),
             Text(widget.errorMsg),
           ],
         ),

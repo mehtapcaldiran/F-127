@@ -1,6 +1,10 @@
+import 'package:bonte/screens/guest_screen.dart';
+import 'package:bonte/screens/login_screen.dart';
+import 'package:bonte/screens/signup_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../bottom_nav_bar/bottom_navigation_bar.dart';
 
 
 class OpeningPage extends StatefulWidget {
@@ -16,8 +20,8 @@ class _OpeningPageState extends State<OpeningPage> {
 
   @override
   Widget build(BuildContext context) {
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
         body: Center(
@@ -25,7 +29,7 @@ class _OpeningPageState extends State<OpeningPage> {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  gradient: const LinearGradient(
+                  gradient: LinearGradient(
                     colors: [
                       Color(0xFF1B5966),
                       Color(0xFF104B57),
@@ -33,7 +37,7 @@ class _OpeningPageState extends State<OpeningPage> {
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
                   ),
-                  borderRadius: const BorderRadius.only(
+                  borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(35),
                     bottomRight: Radius.circular(35),
                   ),
@@ -42,31 +46,31 @@ class _OpeningPageState extends State<OpeningPage> {
                       color: Colors.grey.withOpacity(0.8),
                       spreadRadius: 10,
                       blurRadius: 10,
-                      offset: const Offset(0, 3),
+                      offset: Offset(0, 3),
                     ),
                   ],
                 ),
-                height: pHeight * 0.4,
-                width: pWidth,
+                height: p_height * 0.4,
+                width: p_width,
                 child: Column(
                   children: [
-                    const Padding(
+                    Padding(
                       padding: EdgeInsetsDirectional.only(top: 90),
                     ),
                     Image.asset('assets/logos/logo.png'),
-                    const SizedBox(height: 15,),
+                    SizedBox(height: 15,),
                     Image.asset('assets/logos/yazi_bonte.png'),
                   ],
                 ),
               ),
               Center(
                 child: Container(
-                  height: pHeight * 0.06,
-                  width: pWidth * 0.7,
-                  margin: const EdgeInsets.only(top: 200,),
+                  height: p_height * 0.06,
+                  width: p_width * 0.7,
+                  margin: EdgeInsets.only(top: 200,),
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(const Color(0xFF1B5966),),
+                      backgroundColor: MaterialStateProperty.all(Color(0xFF1B5966),),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(14),
@@ -76,7 +80,7 @@ class _OpeningPageState extends State<OpeningPage> {
                     onPressed: (){
                       context.push('/login');
                     },
-                    child: const Text(
+                    child: Text(
                       'Giriş Yap',
                       style: TextStyle(
                         fontSize: 20,
@@ -85,14 +89,14 @@ class _OpeningPageState extends State<OpeningPage> {
                   ),
                 ),
               ),
-              SizedBox(height: pHeight * 0.03,),
+              SizedBox(height: p_height * 0.03,),
               Center(
-                child: SizedBox(
-                  height: pHeight * 0.06,
-                  width: pWidth * 0.7,
+                child: Container(
+                  height: p_height * 0.06,
+                  width: p_width * 0.7,
                   child: ElevatedButton(
                     style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(const Color(0xFF1B5966),),
+                      backgroundColor: MaterialStateProperty.all(Color(0xFF1B5966),),
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(14),
@@ -102,7 +106,7 @@ class _OpeningPageState extends State<OpeningPage> {
                     onPressed: (){
                       context.push('/signUp');
                     },
-                    child: const Text(
+                    child: Text(
                       'Kayıt Ol',
                       style: TextStyle(
                         fontSize: 20,
@@ -111,18 +115,18 @@ class _OpeningPageState extends State<OpeningPage> {
                   ),
                 ),
               ),
-              SizedBox(height: pHeight * 0.1,),
+              SizedBox(height: p_height * 0.1,),
               Center(
                 child: TextButton.icon(
                   onPressed: (){
                     context.push('/guest');
                   },
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.person,
                     size: 25,
                     color: Color(0xFF1B5966),
                   ),
-                  label: const Text(
+                  label: Text(
                     'Giriş Yapmdan Devam Et',
                     style: TextStyle(
                       fontSize: 16,

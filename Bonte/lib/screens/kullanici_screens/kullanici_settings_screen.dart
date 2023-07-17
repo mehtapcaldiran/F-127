@@ -1,7 +1,11 @@
+import 'package:bonte/route/route_names.dart';
+import 'package:bonte/screens/kullanici_screens/badges_edit_screen.dart';
+import 'package:bonte/screens/kullanici_screens/badges_two_edit_screen.dart';
+import 'package:bonte/screens/kullanici_screens/kullanici_profile_settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() => runApp(const KullaniciSettings());
+void main() => runApp(KullaniciSettings());
 
 class KullaniciSettings extends StatefulWidget {
   const KullaniciSettings({super.key});
@@ -14,24 +18,24 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
   @override
   Widget build(BuildContext context) {
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.go('/yourKullaniciProfile');
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -39,17 +43,17 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: pHeight * 0.08,),
+            SizedBox(height: p_height * 0.08,),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -60,7 +64,7 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 onPressed: () {
                   context.push('/kullaniciProfileSettings');
                 },
-                child: const Text(
+                child: Text(
                   'Profil Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -70,15 +74,15 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -89,7 +93,7 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 onPressed: () {
                   context.push('/badgesEdit');
                 },
-                child: const Text(
+                child: Text(
                   'Sergilenen Rozet Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -99,15 +103,15 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -118,7 +122,7 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 onPressed: () {
                   context.push('/badgesTwoEdit');
                 },
-                child: const Text(
+                child: Text(
                   'Sergilenen Peç Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -128,15 +132,15 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -146,7 +150,7 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Gizlilik Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -156,15 +160,15 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -174,7 +178,7 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Diğer Ayarlar',
                   style: TextStyle(
                     fontSize: 20,
@@ -183,13 +187,13 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 ),
               ),
             ),
-            SizedBox(height: pHeight * 0.08,),
+            SizedBox(height: p_height * 0.08,),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
@@ -203,7 +207,7 @@ class _KullaniciSettingsState extends State<KullaniciSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Çıkış Yap',
                   style: TextStyle(
                     fontSize: 20,

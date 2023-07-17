@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() => runApp(const KurumsalSettings());
+void main() => runApp(KurumsalSettings());
 
 class KurumsalSettings extends StatefulWidget {
   const KurumsalSettings({super.key});
@@ -14,24 +14,24 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
   @override
   Widget build(BuildContext context) {
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.go('/yourKurumsalProfile');
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -39,17 +39,17 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
       body: Center(
         child: Column(
           children: [
-            SizedBox(height: pHeight * 0.08,),
+            SizedBox(height: p_height * 0.08,),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -59,7 +59,7 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Profil Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -69,15 +69,15 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -87,7 +87,7 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Sergilenen Rozet Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -97,15 +97,15 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -115,7 +115,7 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Sergilenen Peç Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -125,15 +125,15 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -143,7 +143,7 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Gizlilik Ayarları',
                   style: TextStyle(
                     fontSize: 20,
@@ -153,15 +153,15 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
               ),
             ),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
-                    const Color(0xFF61DAF5),
+                    Color(0xFF61DAF5),
                   ),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
@@ -171,7 +171,7 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Diğer Ayarlar',
                   style: TextStyle(
                     fontSize: 20,
@@ -180,13 +180,13 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
               ),
             ),
-            SizedBox(height: pHeight * 0.08,),
+            SizedBox(height: p_height * 0.08,),
             Container(
-              padding: const EdgeInsets.only(
+              padding: EdgeInsets.only(
                 top: 30,
               ),
-              height: pHeight * 0.095,
-              width: pWidth * 0.8,
+              height: p_height * 0.095,
+              width: p_width * 0.8,
               child: ElevatedButton(
                 style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(
@@ -200,7 +200,7 @@ class _KurumsalSettingsState extends State<KurumsalSettings> {
                 ),
                 onPressed: () {
                 },
-                child: const Text(
+                child: Text(
                   'Çıkış Yap',
                   style: TextStyle(
                     fontSize: 20,

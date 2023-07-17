@@ -5,12 +5,12 @@ import '../model_providers/badges_provider.dart';
 class badgeShowDialog extends ConsumerWidget {
   final String badgeId;
 
-  const badgeShowDialog({super.key, required this.badgeId});
+  badgeShowDialog({required this.badgeId});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pHeight = MediaQuery.of(context).size.height;
-    final pWidth = MediaQuery.of(context).size.width;
+    final p_height = MediaQuery.of(context).size.height;
+    final p_width = MediaQuery.of(context).size.width;
     final badgesProvider = ref.watch(badgesPreferencesProvider(badgeId));
 
     return AlertDialog(
@@ -27,23 +27,23 @@ class badgeShowDialog extends ConsumerWidget {
           ),
         ),
       ),
-      content: SizedBox(
-        height: pHeight * 0.2,
-        width: pWidth * 0.4,
+      content: Container(
+        height: p_height * 0.2,
+        width: p_width * 0.4,
         child: Center(
           child: Column(
             children: [
               Text(
                 badgesProvider.value!.badgeName,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Text(
                 badgesProvider.value!.badgeInfo,
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 25,
                 ),
               ),
@@ -57,7 +57,7 @@ class badgeShowDialog extends ConsumerWidget {
             onPressed: () {
               Navigator.of(context).pop();
             },
-            child: const Text('Close'),
+            child: Text('Close'),
           ),
         ),
       ],

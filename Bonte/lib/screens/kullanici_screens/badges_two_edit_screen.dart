@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() => runApp(const BadgesTwoEdit());
+void main() => runApp(BadgesTwoEdit());
 
 class BadgesTwoEdit extends StatefulWidget {
   const BadgesTwoEdit({super.key});
@@ -17,39 +17,39 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
   @override
   Widget build(BuildContext context) {
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         actions: [
           TextButton(
               onPressed: (){
                context.pop();
               },
-              child: const Text(
+              child: Text(
                 'Kaydet',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff1b5966b),
+                  color: Color(0xFF1B5966B),
                 ),
               )
           ),
         ],
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -59,7 +59,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
           children: [
             Container(
               decoration: BoxDecoration(
-                gradient: const LinearGradient(
+                gradient: LinearGradient(
                   colors: [
                     Color(0xFF8FB4BC),
                     Color(0xFFA1CAD3),
@@ -67,7 +67,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 ),
-                borderRadius: const BorderRadius.only(
+                borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(40),
                 ),
                 boxShadow: [
@@ -75,34 +75,34 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     color: Colors.grey.withOpacity(0.8),
                     spreadRadius: 10,
                     blurRadius: 10,
-                    offset: const Offset(0, 3),
+                    offset: Offset(0, 3),
                   ),
                 ],
               ),
-              height: pHeight * 0.12,
-              width: pWidth,
+              height: p_height * 0.12,
+              width: p_width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   IconButton(
                     onPressed: (){},
-                    icon: const Icon(Icons.add_chart),
+                    icon: Icon(Icons.add_chart),
                   ),
                   IconButton(
                     onPressed: (){},
-                    icon: const Icon(Icons.add_chart),
+                    icon: Icon(Icons.add_chart),
                   ),
                   IconButton(
                     onPressed: (){},
-                    icon: const Icon(Icons.add_chart),
+                    icon: Icon(Icons.add_chart),
                   ),
                   IconButton(
                     onPressed: (){},
-                    icon: const Icon(Icons.add_chart),
+                    icon: Icon(Icons.add_chart),
                   ),
                   IconButton(
                     onPressed: (){},
-                    icon: const Icon(Icons.add_chart),
+                    icon: Icon(Icons.add_chart),
                   ),
                 ],
               ),
@@ -110,10 +110,10 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
             Expanded(
               child: ListView(
                 shrinkWrap: true,
-                physics: const ClampingScrollPhysics(),
+                physics: ClampingScrollPhysics(),
                 children: [
-                  const SizedBox(height: 30,),
-                  const Center(
+                  SizedBox(height: 30,),
+                  Center(
                     child: Text('Peçleriniz',
                       style: TextStyle(
                         fontSize: 30,
@@ -122,7 +122,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -131,7 +131,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -140,7 +140,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -149,7 +149,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -157,7 +157,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -166,7 +166,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -175,7 +175,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -184,7 +184,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -192,7 +192,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -201,7 +201,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -210,7 +210,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -219,7 +219,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -227,7 +227,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -236,7 +236,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -245,7 +245,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -254,7 +254,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -262,7 +262,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -271,7 +271,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -280,7 +280,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -289,7 +289,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -297,7 +297,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -306,7 +306,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -315,7 +315,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -324,7 +324,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -332,7 +332,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 40),
+                    padding: EdgeInsets.only(top: 40),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
@@ -341,7 +341,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -350,7 +350,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),
@@ -359,7 +359,7 @@ class _BadgesTwoEditState extends State<BadgesTwoEdit> {
                           width: 60,
                           child: IconButton(
                             onPressed: (){},
-                            icon: const Icon(Icons.ac_unit),
+                            icon: Icon(Icons.ac_unit),
                             iconSize: 50,
                           ),
                         ),

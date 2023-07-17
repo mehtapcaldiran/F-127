@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() => runApp(const Search());
+void main() => runApp(Search());
 
 class Search extends StatefulWidget {
   const Search({super.key});
@@ -17,24 +17,24 @@ class _SearchState extends State<Search> {
   @override
   Widget build(BuildContext context) {
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left: 5, top: 5),
+          padding: EdgeInsets.only(left: 5, top: 5),
           child: IconButton(
             onPressed: () {
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -54,12 +54,12 @@ class _SearchState extends State<Search> {
                   hintText: 'Search...',
                   // Add a clear button to the search bar
                   suffixIcon: IconButton(
-                    icon: const Icon(Icons.clear),
+                    icon: Icon(Icons.clear),
                     onPressed: () => _searchController.clear(),
                   ),
                   // Add a search icon or button to the search bar
                   prefixIcon: IconButton(
-                    icon: const Icon(Icons.search),
+                    icon: Icon(Icons.search),
                     onPressed: () {
                       // Perform the search here
                     },
@@ -71,18 +71,18 @@ class _SearchState extends State<Search> {
               ),
             ),
           ),
-            const SizedBox(height: 40,),
+            SizedBox(height: 40,),
             Container(
-              height: pHeight * 0.17,
-              width: pWidth * 0.9,
-              padding: const EdgeInsets.all(10),
+              height: p_height * 0.17,
+              width: p_width * 0.9,
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10),
                 color: Colors.blueGrey
               ),
               child: Stack(
                 children: [
-                  const Text(
+                  Text(
                     'Etkinlikler',
                     style: TextStyle(
                       fontSize: 20,
@@ -90,57 +90,57 @@ class _SearchState extends State<Search> {
                     ),
                   ),
                   Positioned(
-                    top: pHeight * 0.07,
+                    top: p_height * 0.07,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.2,
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.2,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('İklim'),
+                              child: Text('İklim'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.29,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.29,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Hayvansever'),
+                              child: Text('Hayvansever'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.27,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.27,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Afet Yardım'),
+                              child: Text('Afet Yardım'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.3,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.3,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Afet Yardım'),
+                              child: Text('Afet Yardım'),
                             ),
                           ),
                         ],
@@ -150,18 +150,18 @@ class _SearchState extends State<Search> {
                 ],
               ),
             ),
-            const SizedBox(height: 20,),
+            SizedBox(height: 20,),
             Container(
-              height: pHeight * 0.17,
-              width: pWidth * 0.9,
-              padding: const EdgeInsets.all(10),
+              height: p_height * 0.17,
+              width: p_width * 0.9,
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blueGrey
               ),
               child: Stack(
                 children: [
-                  const Text(
+                  Text(
                     'Keşfet',
                     style: TextStyle(
                       fontSize: 20,
@@ -169,57 +169,57 @@ class _SearchState extends State<Search> {
                     ),
                   ),
                   Positioned(
-                    top: pHeight * 0.07,
+                    top: p_height * 0.07,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.2,
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.2,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('İklim'),
+                              child: Text('İklim'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.29,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.29,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Hayvansever'),
+                              child: Text('Hayvansever'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.27,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.27,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Afet Yardım'),
+                              child: Text('Afet Yardım'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.3,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.3,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Afet Yardım'),
+                              child: Text('Afet Yardım'),
                             ),
                           ),
                         ],
@@ -229,18 +229,18 @@ class _SearchState extends State<Search> {
                 ],
               ),
             ),
-            const SizedBox(height: 20,),
+            SizedBox(height: 20,),
             Container(
-              height: pHeight * 0.17,
-              width: pWidth * 0.9,
-              padding: const EdgeInsets.all(10),
+              height: p_height * 0.17,
+              width: p_width * 0.9,
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blueGrey
               ),
               child: Stack(
                 children: [
-                  const Text(
+                  Text(
                     'Dernekler',
                     style: TextStyle(
                       fontSize: 20,
@@ -248,57 +248,57 @@ class _SearchState extends State<Search> {
                     ),
                   ),
                   Positioned(
-                    top: pHeight * 0.07,
+                    top: p_height * 0.07,
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.2,
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.2,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('İklim'),
+                              child: Text('İklim'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.29,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.29,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Hayvansever'),
+                              child: Text('Hayvansever'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.27,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.27,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Afet Yardım'),
+                              child: Text('Afet Yardım'),
                             ),
                           ),
-                          const SizedBox(width: 10,),
-                          SizedBox(
-                            height: pHeight * 0.05,
-                            width: pWidth * 0.3,
+                          SizedBox(width: 10,),
+                          Container(
+                            height: p_height * 0.05,
+                            width: p_width * 0.3,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF1B5966),
+                                backgroundColor: Color(0xFF1B5966),
                               ),
                               onPressed: (){},
-                              child: const Text('Afet Yardım'),
+                              child: Text('Afet Yardım'),
                             ),
                           ),
                         ],
@@ -308,7 +308,7 @@ class _SearchState extends State<Search> {
                 ],
               ),
             ),
-            const SizedBox(height: 20,),
+            SizedBox(height: 20,),
     ],
         ),
       ),

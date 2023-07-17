@@ -2,11 +2,12 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
+import 'package:bonte/screens/kurumsal_screens/your_kurumsal_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:image_picker/image_picker.dart';
 
-void main() => runApp(const EditKurumsalProfile());
+void main() => runApp(EditKurumsalProfile());
 
 class EditKurumsalProfile extends StatefulWidget {
   const EditKurumsalProfile({super.key});
@@ -39,8 +40,8 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
   @override
   Widget build(BuildContext context) {
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     Future<void> pickImage() async {
       try {
@@ -49,6 +50,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
         final imageTemp = XFile(image.path);
         setState(() => this.image = imageTemp);
       } catch (e) {
+        print('Failed to pick image: $e');
       }
     }
 
@@ -59,6 +61,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
         final imageTemp = XFile(image.path);
         setState(() => this.image = imageTemp);
       } catch (e) {
+        print('Failed to pick image from camera: $e');
       }
     }
 
@@ -68,8 +71,9 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
         var image = await ImagePicker().pickImage(source: ImageSource.gallery);
         if (image == null) return;
         final imageTemp = XFile(image.path);
-        setState(() => backgroundImage = imageTemp);
+        setState(() => this.backgroundImage = imageTemp);
       } catch (e) {
+        print('Failed to pick image: $e');
       }
     }
 
@@ -78,8 +82,9 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
         var image = await ImagePicker().pickImage(source: ImageSource.camera);
         if (image == null) return;
         final imageTemp = XFile(image.path);
-        setState(() => backgroundImage = imageTemp);
+        setState(() => this.backgroundImage = imageTemp);
       } catch (e) {
+        print('Failed to pick image from camera: $e');
       }
     }
 
@@ -93,8 +98,10 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
         firebase_storage.FirebaseStorage.instance.ref().child('images/$fileName');
         await firebaseStorageRef.putFile(imageFile);
         final imageUrl = await firebaseStorageRef.getDownloadURL();
+        print('Image URL: $imageUrl');
         return imageUrl; // imageUrl'ü döndür
       } catch (e) {
+        print('Failed to upload image: $e');
         return ''; // Hata durumunda boş bir string döndür
       }
     }
@@ -107,7 +114,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
 
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         actions: [
           TextButton(
@@ -115,6 +122,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                 String errors = validityCheck();
 
                 if(errors != ""){
+                  print(errors);
                   return;
                 }
                 if (image != null){
@@ -146,28 +154,28 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                 }
 
               },
-              child: const Text(
+              child: Text(
                 'Kaydet',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xff1b5966b),
+                  color: Color(0xFF1B5966B),
                 ),
               )
           ),
         ],
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -180,21 +188,21 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
             child: Center(
               child: Column(
                 children: [
-                  SizedBox(
-                    height: pHeight * 0.21,
-                    width: pWidth,
+                  Container(
+                    height: p_height * 0.21,
+                    width: p_width,
                     child: Stack(
                       children: [
                         InkWell(
                           child: ClipRRect(
-                            borderRadius: const BorderRadius.only(
+                            borderRadius: BorderRadius.only(
                               topRight: Radius.circular(40.0),
                               topLeft: Radius.circular(40.0),
                             ),
                             child: Container(
-                              height: pHeight * 0.18,
-                              width: pWidth,
-                              decoration: const BoxDecoration(
+                              height: p_height * 0.18,
+                              width: p_width,
+                              decoration: BoxDecoration(
                                 color: Colors.grey, // Varsayılan bir renk veya diğer dekorasyonları ekleyebilirsiniz
                               ),
                               child: backgroundImage != null
@@ -202,7 +210,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                                 File(backgroundImage!.path),
                                 fit: BoxFit.cover,
                               )
-                                  : const ColoredBox(color: Colors.white12),
+                                  : ColoredBox(color: Colors.white12),
                             )
                           ),
                           onTap: (){
@@ -213,15 +221,15 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     ListTile(
-                                      leading: const Icon(Icons.photo),
-                                      title: const Text('Galeri'),
+                                      leading: Icon(Icons.photo),
+                                      title: Text('Galeri'),
                                       onTap: () async {
                                         await pickImage2();
                                       },
                                     ),
                                     ListTile(
-                                      leading: const Icon(Icons.camera_alt_outlined),
-                                      title: const Text('Kamera'),
+                                      leading: Icon(Icons.camera_alt_outlined),
+                                      title: Text('Kamera'),
                                       onTap: () async {
                                         await pickImageFromCamera2();
                                       },
@@ -233,8 +241,8 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                           },
                         ),
                         Positioned(
-                          top: pHeight * 0.08,
-                          left: pWidth * 0.1,
+                          top: p_height * 0.08,
+                          left: p_width * 0.1,
                           child: InkWell(
                             child: CircleAvatar(
                               radius: 50,
@@ -249,15 +257,15 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       ListTile(
-                                        leading: const Icon(Icons.photo),
-                                        title: const Text('Galeri'),
+                                        leading: Icon(Icons.photo),
+                                        title: Text('Galeri'),
                                         onTap: () async {
                                           await pickImage();
                                         },
                                       ),
                                       ListTile(
-                                        leading: const Icon(Icons.camera_alt_outlined),
-                                        title: const Text('Kamera'),
+                                        leading: Icon(Icons.camera_alt_outlined),
+                                        title: Text('Kamera'),
                                         onTap: () async {
                                           await pickImageFromCamera();
                                         },
@@ -274,7 +282,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                   ),
                   Stack(
                     children: [
-                      const Positioned(
+                      Positioned(
                         top: 31,
                         left: 0,
                         child: Text(
@@ -287,34 +295,34 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                         ),
                       ),
                       Container(
-                        height: pHeight * 0.062,
-                        width: pWidth * 0.8,
+                        height: p_height * 0.062,
+                        width: p_width * 0.8,
                         margin: const EdgeInsets.only(top: 50),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(5),
-                          border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                          border: Border.all(width: 1, color: Color(0xFF1B5966),),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           child: DropdownButtonHideUnderline(
                             child: DropdownButton(
                               value: _select_city,
-                              icon: const Icon(Icons.arrow_drop_down),
+                              icon: Icon(Icons.arrow_drop_down),
                               items: citys.map((String select) {
                                 return DropdownMenuItem(
                                   value: select,
                                   child: Text(
                                     select,
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                       fontSize: 18,
                                     ),
                                   ),
                                 );
                               }).toList(),
-                              onChanged: (String? newSelect){
+                              onChanged: (String? new_select){
                                 setState(() {
-                                  _select_city = newSelect!;
+                                  _select_city = new_select!;
                                 });
                               },
                             ),
@@ -325,7 +333,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                   ),
                   Stack(
                     children: [
-                      const Positioned(
+                      Positioned(
                         top: 21,
                         left: 0,
                         child: Text(
@@ -338,16 +346,16 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                         ),
                       ),
                       Container(
-                        height: pHeight * 0.062,
-                        width: pWidth * 0.8,
-                        margin: const EdgeInsets.only(top: 40),
+                        height: p_height * 0.062,
+                        width: p_width * 0.8,
+                        margin: EdgeInsets.only(top: 40),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                          border: Border.all(width: 1, color: Color(0xFF1B5966),),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(7),
+                          padding: EdgeInsets.all(7),
                           child: TextFormField(
                             decoration: const InputDecoration(
                               border: InputBorder.none,
@@ -360,7 +368,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                   ),
                   Stack(
                     children: [
-                      const Positioned(
+                      Positioned(
                         top: 21,
                         left: 0,
                         child: Text(
@@ -373,16 +381,16 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                         ),
                       ),
                       Container(
-                        height: pHeight * 0.15,
-                        width: pWidth * 0.8,
-                        margin: const EdgeInsets.only(top: 40),
+                        height: p_height * 0.15,
+                        width: p_width * 0.8,
+                        margin: EdgeInsets.only(top: 40),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                          border: Border.all(width: 1, color: Color(0xFF1B5966),),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           child: TextFormField(
                             controller: _info,
                             decoration: const InputDecoration(
@@ -396,7 +404,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                   ),
                   Stack(
                     children: [
-                      const Positioned(
+                      Positioned(
                         top: 21,
                         left: 0,
                         child: Text(
@@ -409,16 +417,16 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                         ),
                       ),
                       Container(
-                        height: pHeight * 0.15,
-                        width: pWidth * 0.8,
-                        margin: const EdgeInsets.only(top: 40),
+                        height: p_height * 0.15,
+                        width: p_width * 0.8,
+                        margin: EdgeInsets.only(top: 40),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                          border: Border.all(width: 1, color: Color(0xFF1B5966),),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           child: TextFormField(
                             decoration: const InputDecoration(
                               border: InputBorder.none,
@@ -431,7 +439,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                   ),
                   Stack(
                     children: [
-                      const Positioned(
+                      Positioned(
                         top: 21,
                         left: 0,
                         child: Text(
@@ -444,16 +452,16 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                         ),
                       ),
                       Container(
-                        height: pHeight * 0.15,
-                        width: pWidth * 0.8,
-                        margin: const EdgeInsets.only(top: 40),
+                        height: p_height * 0.15,
+                        width: p_width * 0.8,
+                        margin: EdgeInsets.only(top: 40),
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(width: 1, color: const Color(0xFF1B5966),),
+                          border: Border.all(width: 1, color: Color(0xFF1B5966),),
                         ),
                         child: Padding(
-                          padding: const EdgeInsets.all(10),
+                          padding: EdgeInsets.all(10),
                           child: TextFormField(
                             decoration: const InputDecoration(
                               border: InputBorder.none,
@@ -464,7 +472,7 @@ class _EditKurumsalProfileState extends State<EditKurumsalProfile> {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 20,),
+                  SizedBox(height: 20,),
                 ],
               ),
             ),

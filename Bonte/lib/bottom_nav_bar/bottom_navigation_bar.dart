@@ -17,8 +17,8 @@ class _BottomNavigationWidgetState extends ConsumerState<BottomNavigationWidget>
     return BottomNavigationBar(
       currentIndex: widget.child.currentIndex,
       onTap: (value) => _onTap(value),
-      backgroundColor: const Color(0xFFB3E1EB), // Arka plan rengi
-      selectedItemColor: const Color(0xFF1B5966), // Seçili öğenin rengi
+      backgroundColor: Color(0xFFB3E1EB), // Arka plan rengi
+      selectedItemColor: Color(0xFF1B5966), // Seçili öğenin rengi
       unselectedItemColor: Colors.grey, // Seçili olmayan öğelerin rengi
       //elevation: 8,
       type: BottomNavigationBarType.fixed,

@@ -30,10 +30,10 @@ class _YourAkisState extends ConsumerState<Populer5> {
             Container(
               height: p_height * 0.48,
               width: p_width * 0.95,
-              color: const Color(0xFF4AE8FF),
+              color: Color(0xFF4AE8FF),
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
                     //padding: EdgeInsets.only(bottom: p_height * 0.37, left: 10),
                     height: p_height * 0.08,
                     width: p_width * 0.95,
@@ -45,10 +45,10 @@ class _YourAkisState extends ConsumerState<Populer5> {
                           backgroundColor: postPreferences.value!.image != "" ? Colors.transparent : Colors.grey,
                           radius: 30,
                         ),
-                        const SizedBox(width: 15,),
+                        SizedBox(width: 15,),
                         Text(
-                          postPreferences.value!.userName,
-                          style: const TextStyle(
+                          '${postPreferences.value!.userName}',
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -74,13 +74,13 @@ class _YourAkisState extends ConsumerState<Populer5> {
                       child: SingleChildScrollView(
                         child: Row(
                           children: [
-                            SizedBox(
+                            Container(
                               height: p_height * 0.07,
                               width: p_width *0.95,
                               child: Text(
                                 softWrap: true,
                                 '${postPreferences.value!.userName}  :        ${postPreferences.value!.info}',
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 15,
                                 ),
@@ -93,14 +93,14 @@ class _YourAkisState extends ConsumerState<Populer5> {
                 ],
               ),
             ),
-            const SizedBox(height: 15,),
+            SizedBox(height: 15,),
             Container(
               height: p_height * 0.48,
               width: p_width * 0.95,
-              color: const Color(0xFF4AE8FF),
+              color: Color(0xFF4AE8FF),
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
                     //padding: EdgeInsets.only(bottom: p_height * 0.37, left: 10),
                     height: p_height * 0.08,
                     width: p_width * 0.95,
@@ -112,10 +112,10 @@ class _YourAkisState extends ConsumerState<Populer5> {
                           backgroundColor: postPreferences1.value!.image != "" ? Colors.transparent : Colors.grey,
                           radius: 30,
                         ),
-                        const SizedBox(width: 15,),
+                        SizedBox(width: 15,),
                         Text(
-                          postPreferences1.value!.userName,
-                          style: const TextStyle(
+                          '${postPreferences1.value!.userName}',
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -141,13 +141,13 @@ class _YourAkisState extends ConsumerState<Populer5> {
                     child: SingleChildScrollView(
                       child: Row(
                         children: [
-                          SizedBox(
+                          Container(
                             height: p_height * 0.06,
                             width: p_width *0.95,
                             child: Text(
                               softWrap: true,
                               '${postPreferences1.value!.userName}  :        ${postPreferences1.value!.info}',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),
@@ -160,14 +160,14 @@ class _YourAkisState extends ConsumerState<Populer5> {
                 ],
               ),
             ),
-            const SizedBox(height: 15,),
+            SizedBox(height: 15,),
             Container(
               height: p_height * 0.48,
               width: p_width * 0.95,
-              color: const Color(0xFF4AE8FF),
+              color: Color(0xFF4AE8FF),
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
                     //padding: EdgeInsets.only(bottom: p_height * 0.37, left: 10),
                     height: p_height * 0.08,
                     width: p_width * 0.95,
@@ -179,10 +179,10 @@ class _YourAkisState extends ConsumerState<Populer5> {
                           backgroundColor: postPreferences2.value!.image != "" ? Colors.transparent : Colors.grey,
                           radius: 30,
                         ),
-                        const SizedBox(width: 15,),
+                        SizedBox(width: 15,),
                         Text(
-                          postPreferences2.value!.userName,
-                          style: const TextStyle(
+                          '${postPreferences2.value!.userName}',
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -208,13 +208,13 @@ class _YourAkisState extends ConsumerState<Populer5> {
                     child: SingleChildScrollView(
                       child: Row(
                         children: [
-                          SizedBox(
+                          Container(
                             height: p_height * 0.07,
                             width: p_width *0.95,
                             child: Text(
                               softWrap: true,
                               '${postPreferences2.value!.userName}  :        ${postPreferences2.value!.info}',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),
@@ -227,14 +227,14 @@ class _YourAkisState extends ConsumerState<Populer5> {
                 ],
               ),
             ),
-            const SizedBox(height: 15,),
+            SizedBox(height: 15,),
             Container(
               height: p_height * 0.48,
               width: p_width * 0.95,
-              color: const Color(0xFF4AE8FF),
+              color: Color(0xFF4AE8FF),
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
                     //padding: EdgeInsets.only(bottom: p_height * 0.37, left: 10),
                     height: p_height * 0.08,
                     width: p_width * 0.95,
@@ -246,10 +246,10 @@ class _YourAkisState extends ConsumerState<Populer5> {
                           backgroundColor: postPreferences3.value!.image != "" ? Colors.transparent : Colors.grey,
                           radius: 30,
                         ),
-                        const SizedBox(width: 15,),
+                        SizedBox(width: 15,),
                         Text(
-                          postPreferences3.value!.userName,
-                          style: const TextStyle(
+                          '${postPreferences3.value!.userName}',
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -275,13 +275,13 @@ class _YourAkisState extends ConsumerState<Populer5> {
                     child: SingleChildScrollView(
                       child: Row(
                         children: [
-                          SizedBox(
+                          Container(
                             height: p_height * 0.07,
                             width: p_width *0.95,
                             child: Text(
                               softWrap: true,
                               '${postPreferences3.value!.userName}  :        ${postPreferences3.value!.info}',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),
@@ -294,14 +294,14 @@ class _YourAkisState extends ConsumerState<Populer5> {
                 ],
               ),
             ),
-            const SizedBox(height: 15,),
+            SizedBox(height: 15,),
             Container(
               height: p_height * 0.48,
               width: p_width * 0.95,
-              color: const Color(0xFF4AE8FF),
+              color: Color(0xFF4AE8FF),
               child: Stack(
                 children: [
-                  SizedBox(
+                  Container(
                     //padding: EdgeInsets.only(bottom: p_height * 0.37, left: 10),
                     height: p_height * 0.08,
                     width: p_width * 0.95,
@@ -313,10 +313,10 @@ class _YourAkisState extends ConsumerState<Populer5> {
                           backgroundColor: postPreferences4.value!.image != "" ? Colors.transparent : Colors.grey,
                           radius: 30,
                         ),
-                        const SizedBox(width: 15,),
+                        SizedBox(width: 15,),
                         Text(
-                          postPreferences4.value!.userName,
-                          style: const TextStyle(
+                          '${postPreferences4.value!.userName}',
+                          style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
                           ),
@@ -342,13 +342,13 @@ class _YourAkisState extends ConsumerState<Populer5> {
                     child: SingleChildScrollView(
                       child: Row(
                         children: [
-                          SizedBox(
+                          Container(
                             height: p_height * 0.07,
                             width: p_width *0.95,
                             child: Text(
                               softWrap: true,
                               '${postPreferences4.value!.userName}  :        ${postPreferences4.value!.info}',
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 fontSize: 15,
                               ),
@@ -361,7 +361,7 @@ class _YourAkisState extends ConsumerState<Populer5> {
                 ],
               ),
             ),
-            const SizedBox(height: 20,),
+            SizedBox(height: 20,),
           ],
         ),
       ),

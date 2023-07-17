@@ -3,9 +3,10 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../model_providers/badges_provider.dart';
 import '../model_providers/events_provider.dart';
+import '../model_providers/user_kullanici_provider.dart';
 import 'badge_show.dart';
 
-void main() => runApp(const EtkinlikInfo());
+void main() => runApp(EtkinlikInfo());
 
 class EtkinlikInfo extends ConsumerStatefulWidget {
   const EtkinlikInfo({super.key});
@@ -26,27 +27,28 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
     }
 
 
+    final userPreferences = ref.read(userPreferencesProvider);
     final eventProvider = ref.read(eventsPreferencesProvider("SZeLRenxtyhfDWln86YV"));
     final badgesProvider = ref.read(badgesPreferencesProvider("UgXlQ95n6gfjPHMAiR2x"));
 
-    var pHeight = MediaQuery.of(context).size.height;
-    var pWidth = MediaQuery.of(context).size.width;
+    var p_height = MediaQuery.of(context).size.height;
+    var p_width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFD9F0F5),
+      backgroundColor: Color(0xFFD9F0F5),
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFD9F0F5),
+        backgroundColor: Color(0xFFD9F0F5),
         leading: Container(
-          padding: const EdgeInsets.only(left:5, top: 5),
+          padding: EdgeInsets.only(left:5, top: 5),
           child: IconButton(
             onPressed: (){
               context.pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back,
               size: 35,
-              color: Color(0xff1b5966b),
+              color: Color(0xFF1B5966B),
             ),
           ),
         ),
@@ -56,16 +58,16 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
           child: Column(
             children: [
               Text(
-            eventProvider.value!.eventName,
-                style: const TextStyle(
+            '${eventProvider.value!.eventName}',
+                style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 30,
                 ),
               ),
-              const SizedBox(height: 10,),
+              SizedBox(height: 10,),
               Container(
-                height: pHeight * 0.4,
-                width: pWidth * 0.85,
+                height: p_height * 0.4,
+                width: p_width * 0.85,
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     image: NetworkImage(eventProvider.value!.eventImage),
@@ -73,42 +75,42 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
                   ),
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Container(
-                height: pHeight * 0.18,
-                width: pWidth * 0.85,
-                padding: const EdgeInsets.all(15),
+                height: p_height * 0.18,
+                width: p_width * 0.85,
+                padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Center(child: Text(
-                  eventProvider.value!.eventInfo,
-                  style: const TextStyle(
+                  '${eventProvider.value!.eventInfo}',
+                  style: TextStyle(
                     fontSize: 17,
                   ),
                 ),
                 ),
               ),
-              const SizedBox(height: 15,),
+              SizedBox(height: 15,),
               Container(
-                height: pHeight * 0.18,
-                width: pWidth * 0.85,
-                padding: const EdgeInsets.all(15),
+                height: p_height * 0.18,
+                width: p_width * 0.85,
+                padding: EdgeInsets.all(15),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: const Color(0xFFD6D4D4),
+                  color: Color(0xFFD6D4D4),
                 ),
                 child: Center(child: Column(
                   children: [
-                    const Text(
+                    Text(
                     'Kazanımlar',
                     style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                    const SizedBox(height: 15,),
+                    SizedBox(height: 15,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -137,14 +139,14 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
                               eventProvider.value!.badge,
                             );
                           },
-                          child: const Icon(
+                          child: Icon(
                             Icons.badge,
                             size: 45,
                           ),
                         ),
                       ],
                     ),
-                    const Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
@@ -167,13 +169,13 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
                 ),
                 ),
               ),
-              const SizedBox(height: 15,),
-              SizedBox(
-                height: pHeight * 0.06,
-                width: pWidth * 0.85,
+              SizedBox(height: 15,),
+              Container(
+                height: p_height * 0.06,
+                width: p_width * 0.85,
                 child: ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: eventProvider.value!.status != "1" ? MaterialStateProperty.all(Colors.grey,) : MaterialStateProperty.all(const Color(0xFF1B5966),),
+                    backgroundColor: eventProvider.value!.status != "1" ? MaterialStateProperty.all(Colors.grey,) : MaterialStateProperty.all(Color(0xFF1B5966),),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(7),
@@ -183,7 +185,7 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
                   onPressed: () {
 
                   },
-                  child: const Text(
+                  child: Text(
                     'Kayıt Ol',
                     style: TextStyle(
                       fontSize: 20,
@@ -191,7 +193,7 @@ class _EtkinlikInfoState extends ConsumerState<EtkinlikInfo> {
                   ),
                 ),
               ),
-              const SizedBox(height: 20,),
+              SizedBox(height: 20,),
             ],
           ),
         ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-void main() => runApp(const Notifications());
+void main() => runApp(Notifications());
 
 class Notifications extends StatefulWidget {
   const Notifications({super.key});
@@ -13,7 +13,7 @@ class Notifications extends StatefulWidget {
 class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
         child: Text('Gösterilecek bildirim yok.'),
       ),
