@@ -6,7 +6,7 @@
 - 2.sprint :30
 - 3.sprint :55
 
-- **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: word dosyası
+- **Daily Scrum**: Daily Scrum toplantılarının hızlı erişim nedeniyle Whatsapp ve Zoom toplantıları üzerinden ilerlemesine karar verilmiştir. Daily Scrum toplantısı özetleri word formatında Readme'de tarafımızdan paylaşılmaktadır: [zoom toplantıları ve görüşme özetleri3](https://github.com/mehtapcaldiran/F-127/blob/main/ZOOM%20TOPLANTILARI%20VE%20G%C3%96R%C3%9C%C5%9EME%20%C3%96ZETLER%C4%B0-3.docx)
 - **Sprint board update**:
 
 - **Ürün Durumu**:
