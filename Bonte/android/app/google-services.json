@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "245536404385",
+    "project_id": "bonte-dc1d7",
+    "storage_bucket": "bonte-dc1d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:245536404385:android:6f27d0150f40490326d1e0",
+        "android_client_info": {
+          "package_name": "com.bonte.bonte"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "245536404385-5avbpu39v4nk9pa11l8bhngnu4jfru2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUXF9UADznDGCQdnh6Q3C8y3olkPxRYnU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "245536404385-5avbpu39v4nk9pa11l8bhngnu4jfru2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

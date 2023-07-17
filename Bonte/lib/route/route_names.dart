@@ -1,0 +1,25 @@
+
+const String home = 'home';
+const String kullaniciSettings = 'kullaniciSettings';
+const String kurumsalSettings = 'kurumsalSettings';
+const String kullaniciProfile = 'kullaniciProfile';
+const String kurumsalProfile = 'kurumsalProfile';
+const String yourKullaniciProfile = 'yourKullaniciProfile';
+const String yourKurumsalProfile = 'yourKurumsalProfile';
+const String editKullaniciProfile = 'editKullaniciProfile';
+const String editKurumsalProfile = 'editKurumsalProfile';
+const String kullaniciProfileSettings = 'kullaniciProfileSettings';
+const String kurumsalProfileSettings = 'kurumsalProfileSettings';
+const String guest = 'guest';
+const String badges = 'badges';
+const String badgesTwo = 'badgesTwo';
+const String badgesEdit = 'badgesEdit';
+const String badgesTwoEdit = 'badgesTwoEdit';
+const String login = 'login';
+const String etkinlikInfo = 'etkinlikInfo';
+const String katildigiEtkinlikler = 'katildigiEtkinlikler';
+const String notifications = 'notifications';
+const String open = 'open';
+const String resetPassword = 'resetPassword';
+const String search = 'search';
+const String signUp = 'signUp';
